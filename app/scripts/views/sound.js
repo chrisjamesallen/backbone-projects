@@ -9,7 +9,6 @@ define([
     'soundmanager'
 ], function($, _, Backbone, Modernizr, JST, soundManager) {
     'use strict';
-
     var SoundView = Backbone.View.extend({
         template: JST['app/scripts/templates/sound.ejs'],
         initialize: function() {
@@ -29,7 +28,12 @@ define([
                     }
                 }
             });
+
+            soundManager.reboot();
+            return this;
         }
+
+
     });
 
     return SoundView;
