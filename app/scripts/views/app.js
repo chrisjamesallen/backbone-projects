@@ -4,9 +4,8 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'templates',
-    'views/gallery'
-], function($, _, Backbone, JST, Gallery) {
+    'templates'
+], function($, _, Backbone, JST) {
     'use strict';
 
     var AppView = Backbone.View.extend({
@@ -14,18 +13,28 @@ define([
         template: JST['app/scripts/templates/app.ejs'],
         addListeners: function() {
             this.listenTo(window.app.routes, 'start', _.bind(this.render, this));
+            $(window).on('resize', _.bind(this.resize, this));
         },
         initialize: function($parent) {
             this.addListeners();
             this.$el.appendTo($parent);
-            this.gallery = new Gallery();
+
             return this;
         },
         render: function() {
             this.$el.html(this.template());
-            // Inject gallery
-            this.gallery.render(this.$('#Gallery-container'));
+            this.$video = this.$('.video');
+            this.resize();
             return this;
+        },
+        resize: function() {
+            var aspect = 9 / 16;
+            var w = _.min([$(window).width() * 0.75, 1000]);
+            var h = w * aspect;
+            this.$video.css({
+                width: w,
+                height: h
+            });
         }
     });
 

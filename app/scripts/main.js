@@ -39,12 +39,10 @@ require([
     'backbone',
     'routes/router',
     'views/app',
-    'views/sound'
-], function(Backbone, Router, App, AppSound) {
+], function(Backbone, Router, App) {
 
     window.app = {};
     window.app.routes = new Router();
     window.app.view = new App($('#Container'));
-    window.app.sound = new AppSound();
     Backbone.history.start();
 });
