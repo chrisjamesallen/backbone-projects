@@ -93,16 +93,23 @@ a,a:visited{
     text-decoration:none;
 }
 
-#Content #Video-container
-{
-    //height:800px;
-    width:100%;
-    position:relative;
-}
+// #Content #Video-container
+// {
+//     //height:800px;
+//     width:250px;
+//     height:200px;
+//     position:relative;
+//     background:red;
+//     overflow:hidden;
+// }
 
-#Video-container iframe{
-
-}
+// #Video-container iframe{
+//     position:absolute;
+//     left:0px;
+//     top:0px;
+//     width:100%;
+//     height:100%;
+// }
 
 
 /* Responsive: Portrait tablets and up */

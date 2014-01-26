@@ -30,6 +30,7 @@ define([
         resize: function() {
             var aspect = 9 / 16;
             var w = _.min([$(window).width() * 0.75, 1000]);
+            w = _.max([w, 300]);
             var h = w * aspect;
             this.$video.css({
                 width: w,
