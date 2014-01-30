@@ -4,8 +4,9 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'templates'
-], function($, _, Backbone, JST) {
+    'templates',
+    'views/gallery'
+], function($, _, Backbone, JST, Gallery) {
     'use strict';
 
     var AppView = Backbone.View.extend({
@@ -17,11 +18,13 @@ define([
         initialize: function($parent) {
             this.addListeners();
             this.$el.appendTo($parent);
+            this.gallery = new Gallery();
             return this;
         },
         render: function() {
-
             this.$el.html(this.template());
+            // Inject gallery
+            this.gallery.render(this.$('#Gallery-container'));
             return this;
         }
     });

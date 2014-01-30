@@ -1,8 +1,10 @@
 'use strict';
 var LIVERELOAD_PORT = 35729;
 var SERVER_PORT = 9000;
-var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
-var mountFolder = function (connect, dir) {
+var lrSnippet = require('connect-livereload')({
+    port: LIVERELOAD_PORT
+});
+var mountFolder = function(connect, dir) {
     return connect.static(require('path').resolve(dir));
 };
 
@@ -13,7 +15,7 @@ var mountFolder = function (connect, dir) {
 // 'test/spec/**/*.js'
 // templateFramework: 'lodash'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     // show elapsed time at the end
     require('time-grunt')(grunt);
     // load all grunt tasks
@@ -57,6 +59,22 @@ module.exports = function (grunt) {
                     'test/spec/**/*.js'
                 ]
             },
+            sass: {
+                files: '**/*.scss',
+                tasks: ['compass'],
+                options: {
+                    livereload: true
+                }
+            },
+            scss: {
+                files: ['sass/*.scss', 'sass/**/*.scss'],
+                tasks: ['sass'],
+                sourceComments: 'normal',
+                options: {
+                    nospawn: true,
+                    livereload: true
+                }
+            },
             jst: {
                 files: [
                     '<%= yeoman.app %>/scripts/templates/*.ejs'
@@ -76,7 +94,7 @@ module.exports = function (grunt) {
             },
             livereload: {
                 options: {
-                    middleware: function (connect) {
+                    middleware: function(connect) {
                         return [
                             lrSnippet,
                             mountFolder(connect, '.tmp'),
@@ -88,7 +106,7 @@ module.exports = function (grunt) {
             test: {
                 options: {
                     port: 9001,
-                    middleware: function (connect) {
+                    middleware: function(connect) {
                         return [
                             lrSnippet,
                             mountFolder(connect, '.tmp'),
@@ -100,7 +118,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 options: {
-                    middleware: function (connect) {
+                    middleware: function(connect) {
                         return [
                             mountFolder(connect, yeomanConfig.dist)
                         ];
@@ -264,6 +282,9 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
+                        'sound/{,*/}*.*',
+                        'fonts/{,*/}*.*',
+                        'vendor/{,*/}*.*',
                         'bower_components/sass-bootstrap/fonts/*.*'
                     ]
                 }]
@@ -290,7 +311,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
+                        //'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
                         '/styles/fonts/{,*/}*.*',
                         'bower_components/sass-bootstrap/fonts/*.*'
                     ]
@@ -299,11 +320,11 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('createDefaultTemplate', function () {
+    grunt.registerTask('createDefaultTemplate', function() {
         grunt.file.write('.tmp/scripts/templates.js', 'this.JST = this.JST || {};');
     });
 
-    grunt.registerTask('server', function (target) {
+    grunt.registerTask('server', function(target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
         }
