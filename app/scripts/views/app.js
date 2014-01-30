@@ -21,8 +21,14 @@ define([
             this.gallery = new Gallery();
             return this;
         },
+        setElements: function() {
+            this.$title = this.$('#Title');
+        },
         render: function() {
             this.$el.html(this.template());
+            this.setElements();
+            this.$title.hide();
+
             // Inject gallery
             this.gallery.render(this.$('#Gallery-container'));
             return this;

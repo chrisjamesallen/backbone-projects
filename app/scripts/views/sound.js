@@ -12,6 +12,11 @@ define([
     var SoundView = Backbone.View.extend({
         template: JST['app/scripts/templates/sound.ejs'],
         initialize: function() {
+            //this.play()
+            return this;
+        },
+
+        play: function() {
             soundManager.setup({
                 useFlashBlock: true, // optional - if used, required flashblock.css
                 url: 'vendor/swf/' // required: path to directory containing SM2 SWF files
@@ -30,7 +35,6 @@ define([
             });
 
             soundManager.reboot();
-            return this;
         }
 
 

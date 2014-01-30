@@ -45,7 +45,7 @@
 
 */
 
-}
+
 
 body
 {
@@ -55,6 +55,7 @@ body
     padding:0;
     text-align:center;
     line-height:27px;
+    background-color:#FCFCFC;
  //   overflow:hidden;
 }
 
@@ -66,7 +67,11 @@ a,a:visited{
     text-decoration:no-underline;
 }
 
-#App
+#App{
+
+}
+
+#Main
 {
     font-family:"GaramondMT",serif;
     display:table;
@@ -76,7 +81,7 @@ a,a:visited{
     overflow:hidden;
 }
 
-#App #Content
+#Main #Content
 {
     display:table-cell;
     position:relative;
@@ -104,7 +109,8 @@ a,a:visited{
 #Gallery-container #Gallery
 {
     width:inherit;
-    height:inherit
+    height:inherit;
+    text-align:left;
 }
 
 #Gallery #Box
@@ -112,7 +118,7 @@ a,a:visited{
     position:relative;
     left:0;
     top:0;
-    width:200%;
+    width:2000%;
     height:inherit;
     -webkit-transition:left 1s;
     -moz-transition:left 1s;
@@ -121,24 +127,14 @@ a,a:visited{
     transition:left 1s
 }
 
-#Gallery #Box.image-one
-{
-    left:0
-}
-
-#Gallery #Box.image-two
-{
-    left:-100%
-}
 
 #Box .item
 {
-    //position:relative;
-    width:49.8% !important;
     height:100%;
     left:0;
     display:inline-block;
-    width:auto
+    width:auto;
+    text-align:center;
 }
 
 #Box .item img{
@@ -175,6 +171,7 @@ a,a:visited{
 
 .arrow.left
 {
+    display: none;
     left:10px;
     top:0%;
     margin:-35px 0 0 0;
@@ -185,6 +182,7 @@ a,a:visited{
 
 .arrow.right
 {
+    display: none;
     right:10px;
     top:0%;
     margin:-35px 0 0 0;
@@ -193,23 +191,62 @@ a,a:visited{
     background:transparent url('../images/arrowright.png') center center no-repeat;
 }
 
-#Content #blurb
+#Share
 {
     display:inline-block;
     max-width:840px;
-    font-size:14px
+    font-size:14px;
+    text-align:right;
+    float:right;
 }
 
-#Content #blurb .continue
+#continue
 {
     font-family:arial;
     font-size:21px;
     padding:14px 0;
+    position: fixed;
+    bottom:0px;
+    left:50%;
+    margin:0 0 0 -50px;
 }
 
-#Content #blurb .continue a{
+#continue a{
     text-decoration:none;
 }
+
+#Title{
+    width:100%;
+    height:100%;
+    background-color:rgba(255,255,255,0.8);
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:10;
+    display:table;
+}
+
+#Title .cell{
+    display:table-cell;
+    vertical-align:middle;
+    padding:10%;
+    max-width: 800px;
+}
+
+#Title h1{
+    font-size:80px;
+    line-height:1em;
+    font-family:"GaramondMT";
+    color:black;
+}
+
+#Title h6{
+    position:fixed;
+    bottom:0px;
+
+}
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
