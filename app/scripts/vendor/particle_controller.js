@@ -13,7 +13,7 @@ define([
         var minParticles = 4;
         var maxParticles = 9;
         var NUM_PARTICLES = Math.floor(Math.random() * (maxParticles - minParticles) + minParticles);
-
+        NUM_PARTICLES = 5;
         this.activeParticles = [];
         this.particleImages = _.shuffle(particles) || [];
         this.xVelocityMax = 2;
@@ -64,7 +64,6 @@ define([
         },
 
         remove: function(particle) {
-            debugger;
             particle.remove();
 
             var arrayIndex = this.activeParticles.indexOf(particle);
