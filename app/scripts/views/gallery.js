@@ -21,6 +21,8 @@ define([
         setListeners: function() {
             this.listenTo(this.images.collection, 'sync', _.bind(this.addGalleryViewsAndLoad, this));
             this.listenTo(this.images.collection, 'change:saved', _.bind(this.showButtons, this));
+            this.listenTo(this.images.collection, 'change:selected', _.bind(this.showButtons, this));
+            $(window).on('resize', _.bind(this.rePosition, this));
         },
         setElements: function() {
             this.$el.html(this.template());
@@ -59,15 +61,14 @@ define([
             this.delegateEvents(this.events);
             this.stopListening(this.images.collection, 'change:saved');
 
-            var i = this.images.getPage();
+            var i = this.images.getPageIndex();
             this.$navigation.$left.show();
             this.$navigation.$right.show();
-
-            if (!i) {
+            if (i <= 0) {
                 this.$navigation.$left.hide();
             }
 
-            if (i > this.images.collection.length) {
+            if (i >= this.images.collection.length - 1) {
                 this.$navigation.$right.hide();
             }
         },
@@ -76,18 +77,20 @@ define([
             //slide left 100% width
             //only go as far as collection saved length
             this.images.prevImage();
-            this.$box.css({
-                'left': $(window).width() * this.images.getPageIndex()
-            });
+            this.rePosition();
         },
 
         goNextPage: function() {
             //slide right 100% width
             this.images.nextImage();
-            this.$box.css({
-                'left': -($(window).width() * this.images.getPageIndex())
-            });
+            this.rePosition();
+            $('#Title h1').css('opacity', 0);
+        },
 
+        rePosition: function() {
+            this.$box.css({
+                'left': -($(window).width() * _.max([this.images.getPageIndex(), 0]))
+            });
         }
     });
 

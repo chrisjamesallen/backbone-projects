@@ -20,7 +20,9 @@ define([
             this.addListeners();
             this.$el.appendTo($parent);
             this.gallery = new Gallery();
-            this.creatures = new Creatures();
+            if (Modernizr.touch) {
+                this.creatures = new Creatures();
+            }
             return this;
         },
         setElements: function() {
