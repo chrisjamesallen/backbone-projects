@@ -67,7 +67,7 @@ define([
                 this.$navigation.$left.hide();
             }
 
-            if (i > this.images.get('images_saved')) {
+            if (i > this.images.collection.length) {
                 this.$navigation.$right.hide();
             }
         },

@@ -5,8 +5,9 @@ define([
     'underscore',
     'backbone',
     'templates',
-    'views/gallery'
-], function($, _, Backbone, JST, Gallery) {
+    'views/gallery',
+    'views/creatures'
+], function($, _, Backbone, JST, Gallery, Creatures) {
     'use strict';
 
     var AppView = Backbone.View.extend({
@@ -19,15 +20,16 @@ define([
             this.addListeners();
             this.$el.appendTo($parent);
             this.gallery = new Gallery();
+            this.creatures = new Creatures();
             return this;
         },
         setElements: function() {
-            this.$title = this.$('#Title');
+            //this.$title = this.$('#Title');
         },
         render: function() {
             this.$el.html(this.template());
             this.setElements();
-            this.$title.hide();
+            //this.$title.hide();
 
             // Inject gallery
             this.gallery.render(this.$('#Gallery-container'));

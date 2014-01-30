@@ -56,8 +56,7 @@ define([
 
         getPage: function() {
             return this.collection.findWhere({
-                'selected': true,
-                'saved': true
+                'selected': true
             });
         },
 
