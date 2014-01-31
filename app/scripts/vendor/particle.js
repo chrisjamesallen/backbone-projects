@@ -16,12 +16,15 @@ define([
         this.img.src = img;
         this.img.onload = _.bind(function(event) {
             // Randomly position
+            //var neg = (_.random(0, 1)) ? -1 : 1;
             this.position = {
                 x: Math.floor($(window).width() - this.img.width) * Math.random(),
                 y: Math.floor($(window).height() - this.img.height) * Math.random(),
                 height: $(this.img).height(),
                 width: $(this.img).width()
+                //rot: _.random(0, 20) * neg
             };
+            //$(this.img).css('transform', 'rotate(' + this.position.rot + 'deg' + ')');
         }, this);
         this.img.style.zIndex = 50000;
         this.img.style.position = 'fixed';
@@ -31,6 +34,7 @@ define([
 
         this.xVelocity = xVelocity;
         this.yVelocity = yVelocity;
+
 
     };
 
