@@ -162,6 +162,8 @@ a,a:visited{
 
 #Box .item img{
     max-width:60%;
+    width:auto !important;
+    height:auto !important;
     //min-height:500px;
     //max-height:50%;
     //height:auto;
@@ -260,6 +262,15 @@ a,a:visited{
 
 #continue a{
     text-decoration:none;
+}
+
+.particle{
+    opacity:0;
+    -webkit-transition:opacity 2s;
+    -moz-transition:opacity 2s;
+    -ms-transition:opacity 2s;
+    -o-transition:opacity 2s;
+    transition:opacity 2s
 }
 
 

@@ -6,8 +6,10 @@ define([
     'backbone',
     'templates',
     'collections/images',
-    'views/GalleryItem'
-], function($, _, Backbone, JST, Images, GalleryItem) {
+    'views/GalleryItem',
+    'views/creatures'
+
+], function($, _, Backbone, JST, Images, GalleryItem, Creatures) {
     'use strict';
 
     var GalleryView = Backbone.View.extend({
@@ -64,12 +66,29 @@ define([
             var i = this.images.getPageIndex();
             this.$navigation.$left.show();
             this.$navigation.$right.show();
+
             if (i <= 0) {
                 this.$navigation.$left.hide();
+                $('#Title h1').css('opacity', 1);
+            } else {
+                $('#Title h1').css('opacity', 0);
             }
 
             if (i >= this.images.collection.length - 1) {
                 this.$navigation.$right.hide();
+            }
+
+            if (!this.creatures && i > 0) {
+                this.turnOnCreatures();
+            }
+        },
+
+        turnOnCreatures: function() {
+            if (!Modernizr.touch) {
+                this.creatures = new Creatures();
+                _.delay(_.bind(function() {
+                    $('.particle').css('opacity', 1);
+                }, this), 1000 );
             }
         },
 
@@ -84,7 +103,7 @@ define([
             //slide right 100% width
             this.images.nextImage();
             this.rePosition();
-            $('#Title h1').css('opacity', 0);
+
         },
 
         rePosition: function() {

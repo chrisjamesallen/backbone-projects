@@ -6,8 +6,7 @@ define([
     'backbone',
     'templates',
     'views/gallery',
-    'views/creatures'
-], function($, _, Backbone, JST, Gallery, Creatures) {
+], function($, _, Backbone, JST, Gallery) {
     'use strict';
 
     var AppView = Backbone.View.extend({
@@ -20,9 +19,7 @@ define([
             this.addListeners();
             this.$el.appendTo($parent);
             this.gallery = new Gallery();
-            if (Modernizr.touch) {
-                this.creatures = new Creatures();
-            }
+
             return this;
         },
         setElements: function() {

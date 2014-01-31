@@ -39,7 +39,7 @@ define([
             particle.getElement().onclick = this.remove.bind(this, particle);
         }
 
-        this.$el = $('<div></div>').addClass('flakes');
+        this.$el = $('<div></div>').addClass('particle');
 
         // Begin update loop
 
