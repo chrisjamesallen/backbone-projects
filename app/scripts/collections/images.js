@@ -17,8 +17,9 @@ define([
         initialize: function() {
             this.collection = new Backbone.Collection([], {
                 model: ImageModel,
-                url: 'scripts/templates/data.json'
+                url: (!Modernizr.touch) ? 'scripts/templates/data.json' : 'scripts/templates/data_mobile.json'
             });
+
             this.listenTo(this.collection, 'change:saved', _.bind(this.savedImage, this));
         },
 

@@ -64,6 +64,7 @@ define([
             this.stopListening(this.images.collection, 'change:saved');
 
             var i = this.images.getPageIndex();
+
             this.$navigation.$left.show();
             this.$navigation.$right.show();
 
