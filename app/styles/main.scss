@@ -278,19 +278,46 @@ a,a:visited{
 @media screen and (min-width: 768px) {
 
 
-
 }
 
 
 @media screen and (max-height: 640px) {/* 568 */
-#Title{
-    width:100%;
-    position:absolute;
-    left:0px;
-    top:100%;
-    z-index:10;
+    #Title{
+        width:100%;
+        position:absolute;
+        left:0px;
+        z-index:10;
+    }
+    #Box .item img{
+        max-width:30%;
+    }
+    .particle img{
+        max-height:100px;
+    }
+
 }
 
 
+//ios 4 and lower
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #Box .item img{
+        max-width:30%;
+    }
 }
+
+//ios5
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+    #Box .item img{
+        max-width:55%;
+    }
+}
+
+
+
+
+
 
