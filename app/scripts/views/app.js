@@ -4,9 +4,8 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'templates',
-    'views/gallery',
-], function($, _, Backbone, JST, Gallery) {
+    'templates'
+], function($, _, Backbone, JST) {
     'use strict';
 
     var AppView = Backbone.View.extend({
@@ -14,25 +13,42 @@ define([
         template: JST['app/scripts/templates/app.ejs'],
         addListeners: function() {
             this.listenTo(window.app.routes, 'start', _.bind(this.render, this));
+            $(window).on('resize', _.bind(this.resize, this));
         },
         initialize: function($parent) {
             this.addListeners();
             this.$el.appendTo($parent);
-            this.gallery = new Gallery();
 
             return this;
-        },
-        setElements: function() {
-            //this.$title = this.$('#Title');
         },
         render: function() {
             this.$el.html(this.template());
-            this.setElements();
-            //this.$title.hide();
-
-            // Inject gallery
-            this.gallery.render(this.$('#Gallery-container'));
+            this.$video = this.$('.video');
+            this.resize();
             return this;
+        },
+        resize: function() {
+            var aspect = 800 / 1920;
+            var w = _.min([$(window).width() * 0.75, 1000]);
+            w = _.max([w, 300]);
+            var h = w * aspect;
+
+
+
+            h = $(window).height() * 0.4;
+            w = h * (1920 / 800);
+
+            if (w >= ($(window).width() * 0.7)) {
+                w = _.min([$(window).width() * 0.75, 1000]);
+                h = w * aspect;
+                w = Math.ceil(w);
+                h = Math.ceil(h);
+            }
+
+            this.$video.css({
+                width: w,
+                height: h
+            });
         }
     });
 
