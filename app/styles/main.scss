@@ -273,6 +273,15 @@ a,a:visited{
     transition:opacity 2s
 }
 
+.video iframe{
+    margin:-2px -2px;
+}
+
+.video{
+    overflow:hidden;
+    display:inline-block;
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
