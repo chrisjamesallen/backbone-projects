@@ -13,7 +13,11 @@ define([
         template: JST['app/scripts/templates/app.ejs'],
         addListeners: function() {
             this.listenTo(window.app.routes, 'start', _.bind(this.render, this));
-            $(window).on('resize', _.bind(this.resize, this));
+            //$(window).on('resize', _.bind(this.resize, this));
+            var deOut = _.debounce(_.bind(this.idleMouse, this), 5000);
+            $(document).on('mousemove', deOut);
+            var deIn = _.debounce(_.bind(this.activeMouse, this), true, 5000);
+            $(document).on('mousemove', deIn);
         },
         initialize: function($parent) {
             this.addListeners();
@@ -24,8 +28,19 @@ define([
         render: function() {
             this.$el.html(this.template());
             this.$video = this.$('.video');
-            this.resize();
+            _.delay(_.bind(this.hideTitle, this), 4000);
+
+            //this.resize();
             return this;
+        },
+        idleMouse: function() {
+            this.$('#Title').fadeOut();
+        },
+        activeMouse: function() {
+            this.$('#Title').fadeIn();
+        },
+        hideTitle: function() {
+            this.$('#Title').fadeOut();
         },
         resize: function() {
             var aspect = 800 / 1920;

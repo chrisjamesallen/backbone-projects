@@ -224,9 +224,9 @@ a,a:visited{
     max-width:840px;
     font-size:14px;
     text-align:right;
-    //position:fixed;
-    //right:10px;
-    //bottom:10px;
+    position:absolute;
+    right:10px;
+    bottom:10px;
 }
 
 
@@ -235,16 +235,16 @@ a,a:visited{
     width:100%;
     position:absolute;
     left:0px;
-    bottom: 10px;
+    top: 10px;
     z-index:10;
 }
 
 
 #Title h1{
-    font-size:30px;
+    font-size:20px;
     line-height:1em;
     font-family:"elucid";
-    color:black;
+    color:white;
     -webkit-transition:opacity 1s;
     -moz-transition:opacity 1s;
     -ms-transition:opacity 1s;
@@ -255,13 +255,20 @@ a,a:visited{
 
 #continue
 {
+    position:absolute;
+    margin:auto;
+    bottom: 10px;
+    width:100%;
+    z-index:10;
     font-family:arial;
-    font-size:21px;
-    padding:14px 0;
+    font-size:17px;
+    padding:5px 0;
+    color:white;
 }
 
 #continue a{
     text-decoration:none;
+        color:white;
 }
 
 .particle{
@@ -274,7 +281,7 @@ a,a:visited{
 }
 
 .video iframe{
-    margin:-2px -2px;
+    //margin:-2px -2px;
 }
 
 .video{
@@ -282,6 +289,15 @@ a,a:visited{
     display:inline-block;
 }
 
+#Video-container{
+    width:100%;
+    height:100%;
+}
+
+.video{
+    width:100%;
+    height:100%;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -291,18 +307,6 @@ a,a:visited{
 
 
 @media screen and (max-height: 640px) {/* 568 */
-    #Title{
-        width:100%;
-        position:absolute;
-        left:0px;
-        z-index:10;
-    }
-    #Box .item img{
-        max-width:30%;
-    }
-    .particle img{
-        max-height:100px;
-    }
 
 }
 
@@ -311,18 +315,46 @@ a,a:visited{
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-    #Box .item img{
-        max-width:30%;
+     #continue
+    {
+        left:10px;
+        right:auto;
+        bottom:30px;
     }
+
+    #Share
+    {
+
+        left:10px;
+        right:auto;
+        bottom:10px;
+    }
+
+
 }
 
 //ios5
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 568px) {
-    #Box .item img{
-        max-width:55%;
+
+     #continue
+    {
+        left:10px;
+        right:auto;
+        bottom:30px;
     }
+
+    #Share
+    {
+
+        left:10px;
+        right:auto;
+        bottom:10px;
+        text-align:left;
+    }
+
+
 }
 
 
