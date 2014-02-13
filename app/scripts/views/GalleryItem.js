@@ -31,7 +31,6 @@ define([
             var h = this.$('img').height();
             var wh = $(window).height();
             //wh = wh * 0.5;
-
         }
     });
 
