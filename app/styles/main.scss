@@ -226,7 +226,8 @@ a,a:visited{
     text-align:right;
     position:absolute;
     right:10px;
-    bottom:10px;
+    bottom:50px;
+    z-index:20;
 }
 
 
@@ -257,7 +258,7 @@ a,a:visited{
 {
     position:absolute;
     margin:auto;
-    bottom: 10px;
+    bottom: 50px;
     width:100%;
     z-index:10;
     font-family:arial;
@@ -317,16 +318,16 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
      #continue
     {
-        left:10px;
-        right:auto;
+        //left:10px;
+        //right:auto;
         bottom:30px;
     }
 
     #Share
     {
 
-        left:10px;
-        right:auto;
+       // left:10px;
+       // right:auto;
         bottom:10px;
     }
 
@@ -340,16 +341,16 @@ and (max-device-width : 568px) {
 
      #continue
     {
-        left:10px;
-        right:auto;
+       // left:10px;
+        //right:auto;
         bottom:30px;
     }
 
     #Share
     {
 
-        left:10px;
-        right:auto;
+        //left:10px;
+        //right:auto;
         bottom:10px;
         text-align:left;
     }
