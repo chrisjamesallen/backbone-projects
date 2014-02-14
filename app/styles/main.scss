@@ -245,7 +245,7 @@ a,a:visited{
     width:100%;
     position:absolute;
     left:0px;
-    bottom: 10px;
+    bottom: 40px;
     z-index:10;
 }
 
@@ -262,7 +262,6 @@ a,a:visited{
     transition:opacity 1s
 }
 
-
 #continue
 {
     font-family:arial;
@@ -272,6 +271,21 @@ a,a:visited{
 
 #continue a{
     text-decoration:none;
+}
+
+#continue {
+    position: fixed;
+    margin: auto;
+    top: 4px;
+    right: 10px;
+    z-index: 10;
+    font-family: arial;
+    font-size: 17px;
+    color: #fff;
+}
+
+.twitter-share-button{
+    width:100px !important;
 }
 
 .particle{
@@ -324,6 +338,12 @@ and (max-device-width : 568px) {
     #Box .item img{
         max-width:55%;
     }
+
+        #Share .fb-like {
+        display:block!important
+    }
+
+
 }
 
 
