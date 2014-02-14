@@ -224,9 +224,14 @@ a,a:visited{
     width:100%;
     font-size:14px;
     text-align:center;
-    //position:fixed;
-    //right:10px;
-    //bottom:10px;
+    position:fixed;
+    left:10px;
+    top:10px;
+    text-align:left;
+}
+
+#Share .fb-like{
+    display: block !important;
 }
 
 #Share iframe{
