@@ -225,12 +225,14 @@ a,a:visited{
     font-size:14px;
     text-align:right;
     position:absolute;
-    right:10px;
-    bottom:50px;
+    top:10px;
+    left:10px;
     z-index:20;
 }
 
-
+#Share .fb-like{
+    margin-top: -6px;
+}
 
 #Title{
     width:100%;
@@ -316,21 +318,9 @@ a,a:visited{
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-     #continue
-    {
-        //left:10px;
-        //right:auto;
-        bottom:30px;
+    #Share .fb-like{
+        display: block !important;
     }
-
-    #Share
-    {
-
-       // left:10px;
-       // right:auto;
-        bottom:10px;
-    }
-
 
 }
 
@@ -339,20 +329,8 @@ and (max-device-width : 480px) {
 and (min-device-width : 320px)
 and (max-device-width : 568px) {
 
-     #continue
-    {
-       // left:10px;
-        //right:auto;
-        bottom:30px;
-    }
-
-    #Share
-    {
-
-        //left:10px;
-        //right:auto;
-        bottom:10px;
-        text-align:left;
+    #Share .fb-like{
+        display: block !important;
     }
 
 
