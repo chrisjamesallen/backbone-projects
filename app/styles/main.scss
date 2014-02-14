@@ -72,7 +72,7 @@ body
     text-align:center;
     line-height:27px;
     background-color:#FCFCFC;
- //   overflow:hidden;
+    overflow:hidden;
 }
 
 html{
@@ -221,12 +221,16 @@ a,a:visited{
 #Share
 {
     display:inline-block;
-    max-width:860px;
+    width:100%;
     font-size:14px;
-    text-align:right;
+    text-align:center;
     //position:fixed;
     //right:10px;
     //bottom:10px;
+}
+
+#Share iframe{
+    display: inline;
 }
 
 
@@ -257,7 +261,7 @@ a,a:visited{
 {
     font-family:arial;
     font-size:21px;
-    padding:14px 0;
+    padding:5px 0 5px 0;
 }
 
 #continue a{
