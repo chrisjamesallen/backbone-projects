@@ -79,9 +79,9 @@ define([
                 this.$navigation.$right.hide();
             }
 
-            if (!this.creatures && i > 0) {
-                this.turnOnCreatures();
-            }
+            // if (!this.creatures && i > 0) {
+            //     this.turnOnCreatures();
+            // }
         },
 
         turnOnCreatures: function() {
