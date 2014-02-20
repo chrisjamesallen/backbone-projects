@@ -14,6 +14,10 @@ eg
     }
 ]
 
+assets should copy the remix images, note: there are a different set of images for mobile.
+
+######change facebook image
+
 
 ######changing facebook and twitter text
 index.html, title + meta tags
