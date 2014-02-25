@@ -8,9 +8,9 @@ define([
 ], function($, _, Backbone, JST) {
     'use strict';
 
-    var GalleryCreditsView = Backbone.View.extend({
-        className: 'credits',
-        template: JST['app/scripts/templates/gallery_credits.ejs'],
+    var GalleryContinueView = Backbone.View.extend({
+        className: 'continue',
+        template: JST['app/scripts/templates/gallery_continue.ejs'],
         render: function() {
             $(window).on('resize', _.bind(this.resize, this));
             this.$el.html(this.template());
@@ -28,14 +28,7 @@ define([
                 'height': $(window).height()
             });
         },
-        show: function() {
-            this.$el.show();
-            this.resize();
-        },
-        hide: function() {
-            this.$el.hide();
-        }
     });
 
-    return GalleryCreditsView;
+    return GalleryContinueView;
 });

@@ -8,9 +8,10 @@ define([
         'collections/images',
         'views/gallery_item',
         'views/gallery_credits',
+        'views/gallery_continue',
         'views/creatures'
     ],
-    function($, _, Backbone, JST, Images, GalleryItem, GalleryCredits, Creatures) {
+    function($, _, Backbone, JST, Images, GalleryItem, GalleryCredits, GalleryContinue, Creatures) {
         'use strict';
 
         var GalleryView = Backbone.View.extend({
@@ -23,7 +24,7 @@ define([
             },
             items: [],
             setListeners: function() {
-                this.listenTo(this.images.collection, 'sync', _.bind(this.addGalleryViewsAndLoad, this));
+                this.listenTo(this.images.collection, 'sync', _.bind(this.addViews, this));
                 this.listenTo(this.images.collection, 'change:saved', _.bind(this.showButtons, this));
                 this.listenTo(this.images.collection, 'change:selected', _.bind(this.showButtons, this));
                 $(window).on('resize', _.bind(this.rePosition, this));
@@ -47,7 +48,15 @@ define([
                 return this;
             },
 
-            addGalleryViewsAndLoad: function() {
+            addViews: function() {
+                this.addGalleryViews();
+                this.addCredits();
+                this.addContinue();
+                this.images.loadGallery();
+                this.rePosition();
+            },
+
+            addGalleryViews: function() {
                 console.log('collection json loaded.,..');
                 _.each(this.images.collection.models, _.bind(function(item) {
                     var i = new GalleryItem({
@@ -56,14 +65,25 @@ define([
                     this.items.push(i);
                     this.$box.append(i.$el);
                 }, this));
+
+            },
+
+            addCredits: function() {
                 this.credits = new GalleryCredits({
                     model: new Backbone.Model()
                 });
                 this.images.collection.push(this.credits.model);
                 this.$box.append(this.credits.el);
-                this.credits.render().hide();
-                this.images.loadGallery();
-                this.rePosition();
+                this.credits.render();
+            },
+
+            addContinue: function() {
+                this.continue_ = new GalleryContinue({
+                    model: new Backbone.Model()
+                });
+                this.images.collection.push(this.continue_.model);
+                this.$box.append(this.continue_.el);
+                this.continue_.render();
             },
 
 
@@ -92,15 +112,12 @@ define([
 
                 if (i >= this.images.collection.length - 1) {
                     this.$navigation.$right.hide();
-                    this.credits.show();
                 }
-                // if (!this.creatures && i > 0) {
-                //     this.turnOnCreatures();
-                // }
+
             },
 
             hideTitle: function() {
-                $('#Title h1, #note').hide();
+                $('#Title').hide();
             },
 
             turnOnCreatures: function() {

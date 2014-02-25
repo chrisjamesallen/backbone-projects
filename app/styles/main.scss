@@ -2,7 +2,19 @@
 @import "compass/css3/transition";
 
 //Universals
+//Example Code
+//@import 'sass-bootstrap/lib/bootstrap';
+/*
 
+@font-face {
+    font-family: GaramondMT-Italic;
+    src: url(fonts/GaramondMT-italic.eot);
+    src: url(fonts/GaramondMT-italic.eot?#iefix) format("embedded-opentype"),url(fonts/GaramondMT-italic.woff) format("woff"),url(fonts/GaramondMT-italic.ttf) format("truetype"),url(fonts/GaramondMT-italic.svg#GaramondMT-italic) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+*/
 @font-face {
     font-family: elucid;
     src: url(fonts/elucid/EuclidFlex-Bold.eot);
@@ -25,51 +37,9 @@
     -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
 
-a{
-    color:white;
-    text-decoration:no-underline !important;
-}
 
 
-.spinner {
-    -webkit-mask-image: url(../images/spinner.png);
-    background-color: #000;
-    -webkit-animation-name: spinnerRotate;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-}
-
-@-webkit-keyframes spinnerRotate {
-    from {
-        -webkit-transform:rotate(0deg);
-    }
-    to {
-        -webkit-transform:rotate(360deg);
-    }
-}
-
-.cell{
-    display:table-cell;
-    vertical-align:middle;
-    text-align:center;
-}
-
-
-
-//Example Code
-//@import 'sass-bootstrap/lib/bootstrap';
-/*
-
-@font-face {
-    font-family: GaramondMT-Italic;
-    src: url(fonts/GaramondMT-italic.eot);
-    src: url(fonts/GaramondMT-italic.eot?#iefix) format("embedded-opentype"),url(fonts/GaramondMT-italic.woff) format("woff"),url(fonts/GaramondMT-italic.ttf) format("truetype"),url(fonts/GaramondMT-italic.svg#GaramondMT-italic) format("svg");
-    font-weight: 400;
-    font-style: normal
-}
-
-*/
+/* Globals */
 
 
 
@@ -90,13 +60,50 @@ html{
 
 }
 a,a:visited{
-    color:black;
-    text-decoration:no-underline;
+    color:white;
+    text-decoration:none;
 }
 
-#App{
+$font-s1 : 100px;
+$font-s2 : 24px;
+$font-s3 : 14px;
 
+$font-l1 : 115px;
+$font-l2 : 41px;
+$font-l3 : 28px;
+
+
+
+
+.cell{
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
 }
+
+.spinner {
+    -webkit-mask-image: url(../images/spinner.png);
+    background-color: #000;
+    -webkit-animation-name: spinnerRotate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes spinnerRotate {
+    from {
+        -webkit-transform:rotate(0deg);
+    }
+    to {
+        -webkit-transform:rotate(360deg);
+    }
+}
+
+
+
+
+
+/* Main */
 
 #Main
 {
@@ -127,6 +134,11 @@ a,a:visited{
     position:relative
 }
 
+
+
+
+
+
 /* Gallery */
 
 #Gallery-container #Gallery
@@ -152,7 +164,47 @@ a,a:visited{
     transition:left 1s
 }
 
-/* Item */
+
+/* Gallery Titling */
+
+#Title{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0px;
+    top: 0%;
+    margin:0 0 0 0;
+    z-index:10;
+    display:table;
+}
+
+#Title h1{
+    font-size:$font-s1;
+    line-height:$font-l1;
+    font-family:"elucid";
+    color:#ffffff;
+    letter-spacing: 1px;
+    color:white;
+    @include transition-property(opacity);
+    @include transition-duration(1s);
+}
+
+
+#note{
+    color: #fff;
+    font-family:"elucid";
+    margin: 30px;
+    font-size: $font-s2;
+    letter-spacing:1px;
+    @include transition-property(opacity);
+    @include transition-duration(1s);
+    a{
+        text-decoration:none;
+        color:white
+    }
+}
+
+/* Gallery Item */
 
 #Box .item
 {
@@ -165,6 +217,7 @@ a,a:visited{
     display:table;
     vertical-align:middle;
     position:absolute;
+    color:white;
     //@extend .spinner;
 }
 
@@ -196,39 +249,50 @@ a,a:visited{
     color: #ffffff;
 }
 
-#Box .credits {
-    height:100%;
-    left:0;
-    width:auto;
-    text-align:center;
-
-    position:relative;
-    vertical-align:middle;
-    font-family:"elucid";
-    letter-spacing: 1px;
-    color: #ffffff;
-    text-align: center;
+#Box .credits, #Box .continue {
+    @extend .item;
 }
 
-#Box .credits .s1{
-    font-size: 24px;
-    line-height: 31px;
+
+
+
+#Box .s1{
+    font-size: $font-s2;
+    line-height: $font-l2;/*31px;*/
     padding: 0 0 24px 0;
     letter-spacing: 1px;
     text-transform: lowercase;
 }
 
-#Box .credits .s2{
-    font-size: 14px;
-    line-height: 22px;
+#Box .s2{
+    font-size: $font-s3;
+    line-height: $font-l3;/*21px;*/
     text-transform: lowercase;
 }
 
-#Box .credits p {
-
+#Box .continue a{
+    font-size: $font-s2;
+    color:white;
+    text-decoration: none;
 }
 
-/* Gallery ui */
+#Box .continue a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navigation */
 
 #Gallery #Navigation
 {
@@ -279,6 +343,9 @@ a,a:visited{
     background:transparent url('../images/arrowright.png') center center no-repeat;
 }
 
+
+/* Share */
+
 #Share
 {
     display:inline-block;
@@ -300,44 +367,6 @@ a,a:visited{
 }
 
 
-
-#Title{
-    width:100%;
-    height:100%;
-    position:absolute;
-    left:0px;
-    top: 0%;
-    margin:0 0 0 0;
-    z-index:10;
-    display:table;
-}
-
-#Title h1{
-    font-size:100px;
-    line-height:115px;
-    font-family:"elucid";
-    color:#ffffff;
-    letter-spacing: 1px;
-    color:white;
-    @include transition-property(opacity);
-    @include transition-duration(1s);
-}
-
-
-#note{
-    color: #fff;
-    font-family:"elucid";
-    margin: 30px;
-    font-size: 17px;
-    letter-spacing:1px;
-    @include transition-property(opacity);
-    @include transition-duration(1s);
-    a{
-        text-decoration:none;
-        color:white
-    }
-}
-
 #continue a{
     color: #fff;
     text-decoration:none;
@@ -357,6 +386,8 @@ a,a:visited{
     z-index: 10;
 }
 
+
+
 .twitter-share-button{
     width:100px !important;
 }
@@ -371,12 +402,10 @@ a,a:visited{
 }
 
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+/* Responsive */
 
 
-}
-
+/* ios */
 
 @media screen and (max-width: 568px){
 
@@ -385,23 +414,29 @@ a,a:visited{
     }
 
     #Title h1 {
-        font-size:100px * 0.4;
-        line-height:115px * 0.4;
+        font-size:$font-s1 * 0.4;
+        line-height:$font-l1 * 0.4;
     }
 
     #Box .credits .s1, #Box .credits .s2 {
-        font-size: 24px * 0.45;
-        line-height: 31px  * 0.45;
+        font-size: $font-s2 * 0.45;
+        line-height: $font-l2  * 0.45;
     }
 
     #Box .credits .s2 {
-        font-size: 14px  * 0.45;
-        line-height: 22px  * 0.45;
+        font-size: $font-s3  * 0.45;
+        line-height: $font-l3  * 0.45;
     }
 
     #Gallery #Navigation{
         top:auto;
         bottom: 80px;
+    }
+
+    #Box .continue a{
+        font-size: $font-s2;
+        color:white;
+        text-decoration: none;
     }
 
     .arrow.left{
@@ -422,6 +457,7 @@ a,a:visited{
 
 }
 
+
 @media screen
 and (max-height: 640px)
 and (min-width: 568px){
@@ -429,6 +465,13 @@ and (min-width: 568px){
         font-size:100px * 0.6;
         line-height:115px * 0.6;
     }
+}
+
+
+@media screen
+and (max-height: 640px)
+and (min-width: 568px){
+
 }
 
 

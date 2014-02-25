@@ -37,9 +37,9 @@ define([
         resize: function() {
 
             if (this.$('img').length) {
-                var targetW = $(window).width() * 0.7;
+                var targetW = $(window).width() * 0.85;
                 var boundaryW = $(window).width() * 0.9;
-                var targetH = $(window).height() * 0.7;
+                var targetH = $(window).height() * 0.85;
                 var w = this.$('img').width();
                 var h = this.$('img').height();
                 var aspect = w / h;
