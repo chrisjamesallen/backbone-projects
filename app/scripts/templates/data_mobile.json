@@ -1,25 +1,62 @@
 [
 
     {
-        "url": "images/covers/love_issue_11_0_mobile.jpg"
+        "url": "images/desktop/0.jpg",
+        "caption": "Ola wears shirt and skirt by Hermés; Nastya wears dress by Erika Cavallini "
     },
 
 
     {
-        "url": "images/covers/love_issue_11_1_mobile.jpg"
+        "url": "images/desktop/1.jpg",
+        "caption": "Nastya wears dress by Joseph "
     },
 
-
     {
-        "url": "images/covers/love_issue_11_2_mobile.jpg"
-    }, {
-        "url": "images/covers/love_issue_11_3_mobile.jpg"
+        "url": "images/desktop/2.jpg",
+        "caption": "Ola wears dress by Leon Max; Nastya wears top by Givenchy"
+
     },
 
+    {
+        "url": "images/desktop/3.jpg",
+        "caption": " Nastya wears jacket by Emporio Armani, shorts by DSquared "
+
+    },
 
     {
-        "url": "images/covers/love_issue_11_4_mobile.jpg"
+        "url": "images/desktop/4.jpg",
+        "caption": "Nastya wears cape by Leon Max "
+
+    },
+
+    {
+        "url": "images/desktop/5.jpg",
+        "caption": "Ola wears dress by Sandro; Natalie wears slip dress by La Perla "
+
+    },
+
+    {
+        "url": "images/desktop/6.jpg",
+        "caption": "Ola wears shirt by Bottega Veneta, skirt by Karen Millen "
+
+    },
+
+    {
+        "url": "images/desktop/7.jpg",
+        "caption": "Natalie wears dress by J Crew (worn backwards) "
+
+    },
+
+    {
+        "url": "images/desktop/8.jpg",
+        "caption": "Natalie wears skirt by La Perla, top by Diesel Black Gold, shoes by Longchamp "
+
+    },
+
+    {
+        "url": "images/desktop/9.jpg",
+        "caption": "Natalie wears dress by Vionnet "
+
     }
-
 
 ]
