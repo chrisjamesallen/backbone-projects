@@ -378,13 +378,48 @@ a,a:visited{
 }
 
 
-@media screen and (max-height: 640px) {/* 568 */
-    #Title{
-        width:100%;
-        position:absolute;
-        left:0px;
-        z-index:10;
+@media screen and (max-width: 568px){
+
+    #Share .fb-like {
+        display:block!important
     }
+
+    #Title h1 {
+        font-size:100px * 0.4;
+        line-height:115px * 0.4;
+    }
+
+    #Box .credits .s1, #Box .credits .s2 {
+        font-size: 24px * 0.45;
+        line-height: 31px  * 0.45;
+    }
+
+    #Box .credits .s2 {
+        font-size: 14px  * 0.45;
+        line-height: 22px  * 0.45;
+    }
+
+    #Gallery #Navigation{
+        top:auto;
+        bottom: 80px;
+    }
+
+    .arrow.left{
+        left:50%;
+        margin:0 0 0 -90px;
+        padding:0;
+        width: 50px;
+        height: 50px;
+    }
+
+    .arrow.right{
+        left:50%;
+        right:auto;
+        margin:0 0 0 20px;
+        width: 50px;
+        height: 50px;
+    }
+
 }
 
 
@@ -393,32 +428,12 @@ a,a:visited{
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
-    #Share .fb-like {
-        display:block!important
-    }
-
-    #Box .credits p {
-        font-size:10px;
-        line-height:12px;
-    }
-
 }
 
 //ios5
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 568px) {
-
-
-    #Share .fb-like {
-        display:block!important
-    }
-
-    #Box .credits p {
-        font-size:10px;
-        line-height:12px;
-    }
-
 
 }
 
