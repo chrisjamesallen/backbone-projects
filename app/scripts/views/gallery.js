@@ -18,7 +18,8 @@ define([
             template: JST['app/scripts/templates/gallery.ejs'],
             events: {
                 'click .left': 'goPreviousPage',
-                'click .right': 'goNextPage'
+                'click .right': 'goNextPage',
+                'click .view_gallery': 'goNextPage'
             },
             items: [],
             setListeners: function() {
@@ -81,9 +82,12 @@ define([
 
                 if (i <= 0) {
                     this.$navigation.$left.hide();
-                $('#Title h1').css('opacity', 1);
                 } else {
-                    $('#Title h1').css('opacity', 0);
+                    if (!this.hasShowTitle) {
+                        $('#Title h1, #note').css('opacity', 0);
+                        _.delay(_.bind(this.hideTitle, this), 2000);
+                        this.hasShowTitle = true;
+                    }
                 }
 
                 if (i >= this.images.collection.length - 1) {
@@ -95,6 +99,10 @@ define([
                 // }
             },
 
+            hideTitle: function() {
+                $('#Title h1, #note').hide();
+            },
+
             turnOnCreatures: function() {
                 if (!Modernizr.touch) {
                     this.creatures = new Creatures();
@@ -104,14 +112,16 @@ define([
                 }
             },
 
-            goPreviousPage: function() {
+            goPreviousPage: function(e) {
+                if (e) e.preventDefault();
                 //slide left 100% width
                 //only go as far as collection saved length
                 this.images.prevImage();
                 this.rePosition();
             },
 
-            goNextPage: function() {
+            goNextPage: function(e) {
+                if (e) e.preventDefault();
                 //slide right 100% width
                 this.images.nextImage();
                 this.rePosition();
