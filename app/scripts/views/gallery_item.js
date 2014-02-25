@@ -12,6 +12,10 @@ define([
     var GalleryitemView = Backbone.View.extend({
         template: JST['app/scripts/templates/gallery_item.ejs'],
         className: 'item',
+        events: {
+            'mouseenter .cell img': 'showFooter',
+            'mouseleave .cell img': 'hideFooter'
+        },
         initialize: function() {
             $(window).on('resize', _.bind(this.resize, this));
             this.$el.html(this.template());
@@ -34,6 +38,14 @@ define([
             this.footer.render().$el.appendTo(this.$el);
         },
 
+        showFooter: function() {
+            this.footer.$el.addClass('visible');
+        },
+
+        hideFooter: function() {
+            this.footer.$el.removeClass('visible');
+        },
+
         resize: function() {
 
             if (this.$('img').length) {
@@ -43,7 +55,7 @@ define([
                 var w = this.$('img').width();
                 var h = this.$('img').height();
                 var aspect = w / h;
-                this.$el.width($(window).width());
+
                 //check if target height works to width
                 if (targetH * aspect < boundaryW) {
                     //..use height target
@@ -56,6 +68,7 @@ define([
             }
 
             var i = this.model.collection.indexOf(this.model);
+            this.$el.width($(window).width());
             this.$el.css({
                 'left': i * $(window).width(),
                 'height': $(window).height()

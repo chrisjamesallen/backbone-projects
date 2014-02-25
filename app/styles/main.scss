@@ -234,13 +234,28 @@ $font-l3 : 28px;
 }
 
 #Box .item .footer{
+    left:0px;
+    bottom: 15px;
+    top: auto;
+
     width:inherit;
     height: 40px;
 
     padding: 20px 0;
-    position: absolute;
+    position: fixed;
     color: #ffffff;
+    opacity:0;
+
+    @include transition-property(opacity);
+    @include transition-duration(1s);
+    @include transition-delay(0.2s);
 }
+
+#Box .item .footer.visible{
+    opacity:1;
+}
+
+
 
 #Box .item .footer h6{
     font-size: 14px;
@@ -279,12 +294,6 @@ $font-l3 : 28px;
 #Box .continue a:hover{
     text-decoration: underline;
 }
-
-
-
-
-
-
 
 
 
@@ -434,7 +443,7 @@ $font-l3 : 28px;
     }
 
     #Box .continue a{
-        font-size: $font-s2;
+        font-size: $font-s2 * 0.6;
         color:white;
         text-decoration: none;
     }
@@ -464,6 +473,16 @@ and (min-width: 568px){
     #Title h1 {
         font-size:100px * 0.6;
         line-height:115px * 0.6;
+    }
+
+    #Box .credits .s1, #Box .credits .s2 {
+        font-size: $font-s2 * 0.7;
+        line-height: $font-l2  * 0.7;
+    }
+
+    #Box .credits .s2 {
+        font-size: $font-s3  * 0.7;
+        line-height: $font-l3  * 0.7;
     }
 }
 
