@@ -38,6 +38,19 @@
 }
 
 
+.hidden{
+    opacity:0;
+    @include transition-property(opacity);
+    @include transition-duration(1s);
+}
+
+.visible{
+    @include transition-property(opacity);
+    @include transition-duration(1s);
+    opacity:1;
+}
+
+
 
 /* Globals */
 
@@ -82,12 +95,16 @@ $font-l3 : 28px;
 }
 
 .spinner {
-    -webkit-mask-image: url(../images/spinner.png);
-    background-color: #000;
+    background-image: url(../images/spinner-white.png);
+    background-size: cover;
+    background-image-repeat: no-repeat;
     -webkit-animation-name: spinnerRotate;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
+    width:20px;
+    height:20px;
+    display:inline-block;
 }
 
 @-webkit-keyframes spinnerRotate {
@@ -244,11 +261,7 @@ $font-l3 : 28px;
     padding: 20px 0;
     position: fixed;
     color: #ffffff;
-    opacity:0;
 
-    @include transition-property(opacity);
-    @include transition-duration(1s);
-    @include transition-delay(0.2s);
 }
 
 #Box .item .footer.visible{

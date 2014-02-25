@@ -25,7 +25,13 @@ define([
         },
         render: function() {
             this.$el.html(this.template());
-            this.$('.cell').empty().append(this.model.get('img'));
+            this.$cell = this.$('.cell');
+            this.$cell.empty().addClass('hidden');
+            this.$cell.append(this.model.get('img'));
+            _.defer(_.bind(function() {
+                this.$cell.addClass('visible');
+                this.$cell.removeClass('hidden');
+            }, this));
             this.addFooter();
             this.resize();
             return this;
@@ -39,11 +45,11 @@ define([
         },
 
         showFooter: function() {
-            this.footer.$el.addClass('visible');
+            this.footer.$('h6').removeClass('hidden').addClass('visible');
         },
 
         hideFooter: function() {
-            this.footer.$el.removeClass('visible');
+            this.footer.$('h6').removeClass('visible').addClass('hidden');
         },
 
         resize: function() {

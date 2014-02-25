@@ -13,6 +13,7 @@ define([
         template: JST['app/scripts/templates/gallery_item_footer.ejs'],
         render: function() {
             this.$el.html(this.template(this.model.toJSON()));
+            this.$('h6').addClass('hidden');
             return this;
         }
     });

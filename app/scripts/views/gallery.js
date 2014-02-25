@@ -27,6 +27,8 @@ define([
                 this.listenTo(this.images.collection, 'sync', _.bind(this.addViews, this));
                 this.listenTo(this.images.collection, 'change:saved', _.bind(this.showButtons, this));
                 this.listenTo(this.images.collection, 'change:selected', _.bind(this.showButtons, this));
+                $(window).on('mousemove', _.debounce(_.bind(this.onIdle, this), 4000));
+                $(window).on('mousemove', _.debounce(_.bind(this.onActive, this), 4000, true));
                 $(window).on('resize', _.bind(this.rePosition, this));
             },
             setElements: function() {
@@ -153,6 +155,14 @@ define([
                     'left': -($(window).width() * _.max([this.images.getPageIndex(), 0])),
                     'height': $(window).height()
                 });
+            },
+
+            onActive: function() {
+                $('#Title, #Navigation, #Share, #continue, .footer').removeClass('hidden').addClass('visible');
+            },
+
+            onIdle: function() {
+                $('#Title, #Navigation, #Share, #continue, .footer').removeClass('visible').addClass('hidden');
             }
         });
 
