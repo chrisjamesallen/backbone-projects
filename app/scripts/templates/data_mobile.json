@@ -1,24 +1,30 @@
 [
 
     {
-        "url": "images/covers/love_issue_11_0_mobile.jpg"
+        "url": "images/covers/love_issue_11_0_mobile.jpg?a"
     },
 
 
     {
-        "url": "images/covers/love_issue_11_1_mobile.jpg"
+        "url": "images/covers/love_issue_11_1_mobile.jpg?a"
     },
 
 
     {
-        "url": "images/covers/love_issue_11_2_mobile.jpg"
-    }, {
-        "url": "images/covers/love_issue_11_3_mobile.jpg"
+        "url": "images/covers/love_issue_11_2_mobile.jpg?a"
+    },
+
+    {
+        "url": "images/covers/love_issue_11_3_mobile.jpg?a"
     },
 
 
     {
-        "url": "images/covers/love_issue_11_4_mobile.jpg"
+        "url": "images/covers/love_issue_11_4_mobile.jpg?a"
+    },
+
+    {
+        "url": "images/covers/love_issue_11_5_mobile.jpg"
     }
 
 
