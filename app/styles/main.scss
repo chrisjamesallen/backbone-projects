@@ -65,6 +65,7 @@ body
     line-height:27px;
     overflow:hidden;
     background-color: #121212;
+    letter-spacing: 3px;
 }
 
 html{
@@ -200,7 +201,7 @@ $font-l3 : 28px;
     line-height:$font-l1;
     font-family:"elucid";
     color:#ffffff;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     color:white;
     @include transition-property(opacity);
     @include transition-duration(1s);
@@ -288,7 +289,7 @@ $font-l3 : 28px;
     font-size: $font-s2;
     line-height: $font-l2;/*31px;*/
     padding: 0 0 24px 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: lowercase;
 }
 
@@ -296,6 +297,7 @@ $font-l3 : 28px;
     font-size: $font-s3;
     line-height: $font-l3;/*21px;*/
     text-transform: lowercase;
+
 }
 
 #Box .continue a{
@@ -378,6 +380,7 @@ $font-l3 : 28px;
     left:10px;
     top:10px;
     text-align:left;
+    z-index:100;
 }
 
 #Share .fb-like{
@@ -405,7 +408,7 @@ $font-l3 : 28px;
     font-family:arial;
     font-size: 11px;
     letter-spacing:0px;
-    z-index: 10;
+    z-index: 101;
 }
 
 
