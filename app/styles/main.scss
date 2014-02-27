@@ -428,7 +428,27 @@ $font-l3 : 28px;
 
 
 /* Responsive */
+    .Responsive_mobile_arrow_left{
+        left:50%;
+        margin:0 0 0 -120px;
+        padding:0;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowleft-mobile.png') center center no-repeat;
+        background-color:red;
 
+    }
+
+    .Responsive_mobile_arrow_right{
+        left:50%;
+        right:auto;
+        margin:0 0 0 20px;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowright-mobile.png') center center no-repeat;
+        background-color:red;
+
+    }
 
 /* ios */
 
@@ -455,7 +475,7 @@ $font-l3 : 28px;
 
     #Gallery #Navigation{
         top:auto;
-        bottom: 80px;
+        bottom: 120px;
     }
 
     #Box .continue a{
@@ -466,20 +486,60 @@ $font-l3 : 28px;
 
     .arrow.left{
         left:50%;
-        margin:0 0 0 -90px;
+        margin:0 0 0 -120px;
         padding:0;
-        width: 50px;
-        height: 50px;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowleft-mobile.png') center center no-repeat;
+        //background-color:red;
     }
 
     .arrow.right{
         left:50%;
         right:auto;
         margin:0 0 0 20px;
-        width: 50px;
-        height: 50px;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowright-mobile.png') center center no-repeat;
+        //background-color:red;
     }
 
+
+}
+
+
+//Ipad
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+
+    #Gallery #Navigation{
+        top:auto;
+        bottom: 120px;
+    }
+
+
+    .arrow.left{
+        left:50%;
+        margin:0 0 0 -120px;
+        padding:0;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowleft-mobile.png') center center no-repeat;
+       // background-color:red;
+    }
+
+    .arrow.right{
+        left:50%;
+        right:auto;
+        margin:0 0 0 20px;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowright-mobile.png') center center no-repeat;
+        //background-color:red;
+    }
 }
 
 

@@ -27,8 +27,11 @@ define([
                 this.listenTo(this.images.collection, 'sync', _.bind(this.addViews, this));
                 this.listenTo(this.images.collection, 'change:saved', _.bind(this.showButtons, this));
                 this.listenTo(this.images.collection, 'change:selected', _.bind(this.showButtons, this));
-                $(window).on('mousemove', _.debounce(_.bind(this.onIdle, this), 2000));
-                $(window).on('mousemove', _.debounce(_.bind(this.onActive, this), 2000, true));
+
+                if (!Modernizr.touch) {
+                    $(window).on('mousemove', _.debounce(_.bind(this.onIdle, this), 2000));
+                    $(window).on('mousemove', _.debounce(_.bind(this.onActive, this), 2000, true));
+                }
                 $(window).on('resize', _.bind(this.rePosition, this));
             },
             setElements: function() {
