@@ -208,7 +208,7 @@ $font-l3 : 28px;
 
 
 #note{
-    color: #fff;
+    color: cyan;
     font-family:"elucid";
     margin: 30px;
     font-size: $font-s2;
@@ -217,7 +217,7 @@ $font-l3 : 28px;
     @include transition-duration(1s);
     a{
         text-decoration:none;
-        color:white
+        color:cyan;
     }
 }
 
