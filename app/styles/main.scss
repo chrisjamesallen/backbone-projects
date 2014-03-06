@@ -424,6 +424,15 @@ $font-l3 : 28px;
     transition:opacity 2s
 }
 
+.video iframe{
+    margin:-2px -2px;
+}
+
+.video{
+    overflow:hidden;
+    display:inline-block;
+}
+
 
 /* Responsive */
 
