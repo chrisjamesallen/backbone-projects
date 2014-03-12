@@ -1,5 +1,4 @@
 /*global define*/
-
 define([
     'jquery',
     'underscore',
@@ -19,13 +18,10 @@ define([
             this.addListeners();
             this.$el.appendTo($parent);
             this.gallery = new Gallery();
-
             return this;
         },
-        setElements: function() {},
         render: function() {
-            this.$el.html(this.template());
-            this.setElements();
+            this.super('render');
             this.gallery.render(this.$('#Gallery-container'));
             return this;
         }

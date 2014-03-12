@@ -1,1 +1,54 @@
+/*
+Syntax error: File to import not found or unreadable: compass/reset.
+              Load path: /Users/chrisallen/localProjects/love-magazine/website/working folder/feature-template/app/styles
+        on line 1 of main.scss
 
+1: @import "compass/reset";
+2: @import "compass/css3/transition";
+3: @import "partials/typography";
+4: 
+5: 
+6: *{
+
+Backtrace:
+main.scss:1
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/import_node.rb:45:in `import'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/tree/root_node.rb:20:in `render'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/exec.rb:443:in `watch_or_update'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/exec.rb:326:in `process_result'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/exec.rb:41:in `parse'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/lib/sass/exec.rb:21:in `parse!'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.2.14/bin/scss:13:in `<top (required)>'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/bin/scss:23:in `load'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/bin/scss:23:in `<main>'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/chrisallen/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: compass/reset.\A               Load path: /Users/chrisallen/localProjects/love-magazine/website/working folder/feature-template/app/styles\A         on line 1 of main.scss\A \A 1: @import \"compass/reset\";\A 2: @import \"compass/css3/transition\";\A 3: @import \"partials/typography\";\A 4: \A 5: \A 6: *{"; }

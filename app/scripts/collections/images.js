@@ -1,92 +1,97 @@
 /*global define*/
 
 define([
-    'underscore',
-    'backbone',
-    'models/image'
-], function(_, Backbone, ImageModel) {
-    'use strict';
+  'underscore',
+  'backbone',
+  'models/image'
+], function (_, Backbone, ImageModel) {
+  'use strict';
 
-    var Images = Backbone.Model.extend({
-        //load collection
-        //handle: when image loads
-        defaults: {
-            images_saved: 0
-        },
+  var Images = Backbone.Model.extend({
+    defaults: {
+      images_saved: 0
+    },
 
-        initialize: function() {
-            this.collection = new Backbone.Collection([], {
-                model: ImageModel,
-                url: (!Modernizr.touch) ? 'scripts/templates/data.json' : 'scripts/templates/data_mobile.json'
-            });
+    initialize: function () {
+      this.collection = new Backbone.Collection([], {
+        model: ImageModel,
+        url: (!Modernizr.touch) ? 'scripts/templates/data.json' : 'scripts/templates/data_mobile.json'
+      });
+      this.collection.parse = this.parse;
 
-            this.listenTo(this.collection, 'change:saved', _.bind(this.savedImage, this));
-        },
+      this.listenTo(this.collection, 'change:saved', _.bind(this.savedImage, this));
+    },
 
-        //public
-        fetch: function() {
-            this.collection.fetch();
-        },
 
-        //public
-        loadGallery: function() {
-            this.loadAnImage();
-        },
+    parse: function (response) {
+      this.title = response.title;
+      return response.assets;
+    },
 
-        loadAnImage: function() {
-            var nextItem = this.collection.findWhere({
-                'saved': false
-            });
-            if (nextItem) {
-                nextItem.backgroundload();
-            }
-        },
+    //public
+    fetch: function () {
+      this.collection.fetch();
+    },
 
-        savedImage: function() {
-            this.set('saved', (this.get('images_saved')) + 1);
-            this.loadAnImage();
-        },
+    //public
+    loadGallery: function () {
+      this.loadAnImage();
+    },
 
-        nextImage: function() {
-            this.changeImageSelected(1);
-        },
+    loadAnImage: function () {
+      var nextItem = this.collection.findWhere({
+        'saved': false
+      });
+      if (nextItem) {
+        nextItem.backgroundload();
+      }
+    },
 
-        prevImage: function() {
-            this.changeImageSelected(-1);
-        },
+    savedImage: function () {
+      this.set('saved', (this.get('images_saved')) + 1);
+      this.loadAnImage();
+    },
 
-        getPage: function() {
-            return this.collection.findWhere({
-                'selected': true
-            });
-        },
+    nextImage: function () {
+      this.changeImageSelected(1);
+    },
 
-        getPageIndex: function() {
-            return this.collection.indexOf(this.getPage());
-        },
+    prevImage: function () {
+      this.changeImageSelected(-1);
+    },
 
-        changeImageSelected: function(direction) {
-            var selected = this.getPage();
-            //deselect
-            if (_.isEmpty(selected)) {
-                selected = this.collection.first();
-            } else {
-                selected.set('selected', false);
-            }
+    getPage: function () {
+      return this.collection.findWhere({
+        'selected': true
+      });
+    },
 
-            //assign
-            selected = this.collection.models[(this.collection.indexOf(selected) + direction)];
-            if (_.isEmpty(selected)) {
-                selected = this.collection.first();
-            }
-            selected.set('selected', true);
-            return selected;
-        },
+    getPageIndex: function () {
+      return this.collection.indexOf(this.getPage());
+    },
 
-        onChange: function() {
+    changeImageSelected: function (direction) {
+      var selected = this.getPage();
+      //deselect
+      if (_.isEmpty(selected)) {
+        selected = this.collection.first();
+      } else {
+        selected.set('selected', false);
+      }
 
-        }
-    });
-    window.Images = Images;
-    return Images;
+      //assign
+      selected = this.collection.models[(this.collection.indexOf(selected) + direction)];
+      if (_.isEmpty(selected)) {
+        selected = this.collection.first();
+      }
+      selected.set('selected', true);
+      return selected;
+    },
+
+    onChange: function () {
+
+    }
+  });
+  window.Images = Images;
+  return Images;
 });

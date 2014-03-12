@@ -6,7 +6,7 @@ define([
     'views/app'
 ], function($, Backbone, App) {
     'use strict';
-
+    //TODO add actual useable routes here
     var RouterRouter = Backbone.Router.extend({
         routes: {
             '': 'default'
@@ -15,7 +15,6 @@ define([
         default: function() {
             this.trigger('start');
         }
-
     });
 
     return RouterRouter;

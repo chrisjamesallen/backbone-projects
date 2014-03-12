@@ -5,17 +5,18 @@ define([
     'underscore',
     'backbone',
     'templates',
-    'views/gallery_item_footer'
+    'views/gallery/types/shared/footer'
 ], function($, _, Backbone, JST, GalleryItemFooter) {
     'use strict';
 
-    var GalleryitemView = Backbone.View.extend({
+    var GalleryItemView = Backbone.View.extend({
         template: JST['app/scripts/templates/gallery_item.ejs'],
         className: 'item',
         events: {
             'mouseenter .cell img': 'showFooter',
             'mouseleave .cell img': 'hideFooter'
         },
+
         initialize: function() {
             $(window).on('resize', _.bind(this.resize, this));
             this.$el.html(this.template());
@@ -23,6 +24,7 @@ define([
             this.listenTo(this.model, 'change:saved', _.bind(this.render, this));
             return this;
         },
+
         render: function() {
             this.$el.html(this.template());
             this.$cell = this.$('.cell');
@@ -53,8 +55,7 @@ define([
         },
 
         resize: function() {
-
-            if (this.$('img').length) {
+            if(this.$('img').length) {
                 var targetW = $(window).width() * 0.85;
                 var boundaryW = $(window).width() * 0.9;
                 var targetH = $(window).height() * 0.85;
@@ -72,7 +73,6 @@ define([
                     this.$('img').height(targetW / aspect);
                 }
             }
-
             var i = this.model.collection.indexOf(this.model);
             this.$el.width($(window).width());
             this.$el.css({
@@ -82,5 +82,5 @@ define([
         }
     });
 
-    return GalleryitemView;
+    return GalleryItemView;
 });

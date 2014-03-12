@@ -1,45 +1,57 @@
-[
+{
+
+  "title": "Something blah",
+  "assets": [
+
+    {
+      "url": "images/desktop/1.jpg",
+      "type": "video",
+      "caption": ""
+    },
 
 
     {
-        "url": "images/desktop/1.jpg",
-        "caption": ""
+      "url": "images/desktop/1.jpg",
+      "type": "image",
+      "caption": ""
     },
 
     {
-        "url": "images/desktop/2.jpg",
-        "caption": ""
-
+      "url": "images/desktop/2.jpg",
+      "type": "image",
+      "caption": ""
     },
 
     {
-        "url": "images/desktop/3.jpg",
-        "caption": ""
-
+      "url": "images/desktop/3.jpg",
+      "type": "image",
+      "caption": ""
     },
 
     {
-        "url": "images/desktop/4.jpg",
-        "caption": ""
-
+      "url": "images/desktop/4.jpg",
+      "type": "image",
+      "caption": ""
     },
 
     {
-        "url": "images/desktop/5.jpg",
-        "caption": ""
-
+      "url": "images/desktop/5.jpg",
+      "type": "image",
+      "caption": ""
     },
 
     {
-        "url": "images/desktop/6.jpg",
-        "caption": ""
-
+      "url": "images/desktop/6.jpg",
+      "type": "image",
+      "caption": ""
     },
 
     {
-        "url": "images/desktop/7.jpg",
-        "caption": ""
-
+      "url": "images/desktop/7.jpg",
+      "type": "image",
+      "caption": ""
     }
 
-]
+  ]
+
+}
