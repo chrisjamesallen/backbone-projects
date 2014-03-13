@@ -1,6 +1,7 @@
 @import "compass/reset";
 @import "compass/css3/transition";
 @import "partials/typography";
+@import "partials/shared/activity_indicator";
 
 
 *{
@@ -403,6 +404,28 @@ a,a:visited{
     overflow:hidden;
     display:inline-block;
 }
+
+
+
+.item .player{
+  width:60%;
+  position: absolute;
+}
+
+.item .player iframe{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* Responsive */
