@@ -123,6 +123,9 @@ define([
 
           if (i <= 0) {
             this.$navigation.$left.hide();
+            $('#Title').show();
+            this.hasShowTitle = false;
+            this.defer(this.showTitle)
           } else {
             if (!this.hasShowTitle) {
               $('#Title h1, #note').css('opacity', 0);
@@ -137,8 +140,16 @@ define([
 
         },
 
+        showTitle: function () {
+          if(!this.hasShowTitle){
+            $('#Title h1, #note').css('opacity', 1);
+          }
+        },
+
         hideTitle: function () {
-          $('#Title').hide();
+          if(this.hasShowTitle){
+            $('#Title').hide();
+          }
         },
 
         turnOnCreatures: function () {
