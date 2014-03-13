@@ -28,8 +28,10 @@ define([
           this.listenTo(this.images.collection, 'sync', _.bind(this.onSync, this));
           this.listenTo(this.images.collection, 'change:saved', _.bind(this.showButtons, this));
           this.listenTo(this.images.collection, 'change:selected', _.bind(this.showButtons, this));
-          $(window).on('mousemove', _.debounce(_.bind(this.onIdle, this), 2000));
-          $(window).on('mousemove', _.debounce(_.bind(this.onActive, this), 2000, true));
+          if(Modernizr.touch){
+            $(window).on('mousemove', _.debounce(_.bind(this.onIdle, this), 2000));
+            $(window).on('mousemove', _.debounce(_.bind(this.onActive, this), 2000, true));
+          }
           $(window).on('resize', _.bind(this.rePosition, this));
         },
 
@@ -45,6 +47,7 @@ define([
           this.$navigation.$left.hide();
           this.addListeners();
           this.images.fetch();
+          this.onActive();
           window.gallery = this;
           return this;
         },
@@ -184,11 +187,11 @@ define([
         },
 
         onActive: function () {
-          $('#Title, #Navigation, #Share, #continue, .footer').removeClass('hidden').addClass('visible');
+          $('#Title, #Navigation, #Share, #continue').removeClass('hidden').addClass('visible');
         },
 
         onIdle: function () {
-          $('#Title, #Navigation, #Share, #continue, .footer').removeClass('visible').addClass('hidden');
+          $('#Title, #Navigation, #Share, #continue').removeClass('visible').addClass('hidden');
         }
       });
 

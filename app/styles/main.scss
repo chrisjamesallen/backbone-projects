@@ -44,6 +44,7 @@ body
     line-height:27px;
     overflow:hidden;
     background-color: #121212;
+    letter-spacing: 3px;
 }
 
 html{
@@ -172,7 +173,7 @@ a,a:visited{
     line-height:$font-l1;
     font-family:"elucid";
     color:#ffffff;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     color:white;
     @include transition-property(opacity);
     @include transition-duration(1s);
@@ -260,7 +261,7 @@ a,a:visited{
     font-size: $font-s2;
     line-height: $font-l2;/*31px;*/
     padding: 0 0 24px 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: lowercase;
 }
 
@@ -268,6 +269,7 @@ a,a:visited{
     font-size: $font-s3;
     line-height: $font-l3;/*21px;*/
     text-transform: lowercase;
+
 }
 
 #Box .continue a{
@@ -351,6 +353,7 @@ a,a:visited{
     top:10px;
     z-index:100;
     text-align:left;
+    z-index:100;
 }
 
 #Share .fb-like{
@@ -429,7 +432,27 @@ a,a:visited{
 
 
 /* Responsive */
+    .Responsive_mobile_arrow_left{
+        left:50%;
+        margin:0 0 0 -120px;
+        padding:0;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowleft-mobile.png') center center no-repeat;
+        background-color:red;
 
+    }
+
+    .Responsive_mobile_arrow_right{
+        left:50%;
+        right:auto;
+        margin:0 0 0 20px;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowright-mobile.png') center center no-repeat;
+        background-color:red;
+
+    }
 
 /* ios */
 
@@ -456,7 +479,7 @@ a,a:visited{
 
     #Gallery #Navigation{
         top:auto;
-        bottom: 80px;
+        bottom: 120px;
     }
 
     #Box .continue a{
@@ -467,20 +490,60 @@ a,a:visited{
 
     .arrow.left{
         left:50%;
-        margin:0 0 0 -90px;
+        margin:0 0 0 -120px;
         padding:0;
-        width: 50px;
-        height: 50px;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowleft-mobile.png') center center no-repeat;
+        //background-color:red;
     }
 
     .arrow.right{
         left:50%;
         right:auto;
         margin:0 0 0 20px;
-        width: 50px;
-        height: 50px;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowright-mobile.png') center center no-repeat;
+        //background-color:red;
     }
 
+
+}
+
+
+//Ipad
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+
+    #Gallery #Navigation{
+        top:auto;
+        bottom: 160px;
+    }
+
+
+    .arrow.left{
+        left:50%;
+        margin:0 0 0 -120px;
+        padding:0;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowleft-mobile.png') center center no-repeat;
+       // background-color:red;
+    }
+
+    .arrow.right{
+        left:50%;
+        right:auto;
+        margin:0 0 0 20px;
+        width: 120px;
+        height: 120px;
+        background:transparent url('../images/arrowright-mobile.png') center center no-repeat;
+        //background-color:red;
+    }
 }
 
 

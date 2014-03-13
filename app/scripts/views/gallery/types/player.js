@@ -56,6 +56,7 @@ define([
     on_vimeo_load: function () {
       this.$iframe.animate({'opacity': 1});
       this.onResize();
+      this.defer(this.onResize);
       this.spinner.hide();
       this.removeListener(this.$iframe, 'load');
       this.checkSelected();
@@ -64,6 +65,7 @@ define([
     onResize: function () {
       this.$el.height(this.$el.width() * this.DEFAULT_ASPECT);
       this.$el.center();
+      console.log('resize');
     },
 
     transition_in: function () {

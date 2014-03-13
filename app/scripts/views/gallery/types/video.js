@@ -15,8 +15,8 @@ define([
     template: JST['app/scripts/templates/gallery_item_video.ejs'],
     DEFAULT_ASPECT: (9 / 14),
     events_active: {
-      'mouseenter': 'showFooter',
-      'mouseleave': 'hideFooter'
+      //'mouseenter': 'showFooter',
+     // 'mouseleave': 'hideFooter'
     },
 
 
@@ -25,6 +25,7 @@ define([
       this.$el.addClass('video');
       this.player = new VideoPlayer({'model': this.model});
       this.addChild(this.player);
+      this.addListener(this.model,'change:selected',this.checkSelected);
       this.active();
       return this;
     },
@@ -35,6 +36,14 @@ define([
 
     in_active: function () {
       this.super('in_active');
+    },
+
+    checkSelected: function(){
+      if(this.model.get('selected')){
+        this.showFooter();
+      }else{
+        this.hideFooter();
+      }
     },
 
     addFooter: function () {

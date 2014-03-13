@@ -28,13 +28,13 @@ define([
         render: function() {
             this.$el.html(this.template());
             this.$cell = this.$('.cell');
-            this.$cell.empty().addClass('hidden');
+            this.$cell.empty().opacity(0);
             this.$cell.append(this.model.get('img'));
             _.defer(_.bind(function() {
-                this.$cell.addClass('visible');
-                this.$cell.removeClass('hidden');
+                this.$cell.animate({'opacity':1});
             }, this));
             this.addFooter();
+            this.showFooter();
             this.resize();
             return this;
         },
