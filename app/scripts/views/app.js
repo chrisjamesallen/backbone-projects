@@ -4,7 +4,8 @@ define([
     'underscore',
     'backbone',
     'templates',
-    'views/gallery',
+    'views/gallery'
+
 ], function($, _, Backbone, JST, Gallery) {
     'use strict';
 

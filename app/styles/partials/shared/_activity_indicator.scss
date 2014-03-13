@@ -1,0 +1,34 @@
+$spinner-width: 20px;
+
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform:rotate(0deg);
+  }
+  to {
+    -webkit-transform:rotate(360deg);
+  }
+}
+
+
+.spinner {
+  width: $spinner-width;
+  height: $spinner-width;
+  position:absolute;
+
+  // Setting background-size to a fixed value seems to circumvent Chrome background-image offset bug
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  background-image: url(../images/spinner-white.png);
+}
+
+.spin{
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+

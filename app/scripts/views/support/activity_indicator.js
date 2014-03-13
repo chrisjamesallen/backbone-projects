@@ -2,8 +2,8 @@ window.ActivityIndicator = Backbone.View.extend({
   className: 'spinner',
   assets: {
     default: {
-      white: "spinner-black.png",
-      black: "spinner-white.png"
+      white: "images/spinner-black.png",
+      black: "images/spinner-white.png"
     }
 
 
@@ -16,7 +16,7 @@ window.ActivityIndicator = Backbone.View.extend({
     if (args.width && args.height) {
       this.setSize(args.width, args.height);
     }
-    this.check_inverted();
+    this.checkInverted();
     this.active();
     return this;
   },

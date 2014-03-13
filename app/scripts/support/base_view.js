@@ -179,7 +179,7 @@ define([
       });
     },
 
-    on_resize : function(){
+    onResize : function(){
 
     }
 

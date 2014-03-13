@@ -27,7 +27,6 @@ define([
         },
         loaded: function() {
             //call out loaded
-            console.log('loaded!');
             this.set('saved', true);
         },
         onChange: function() {

@@ -40,7 +40,8 @@ define([
 
     loadAnImage: function () {
       var nextItem = this.collection.findWhere({
-        'saved': false
+        'saved': false,
+        'type':'image'
       });
       if (nextItem) {
         nextItem.backgroundload();

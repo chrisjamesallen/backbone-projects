@@ -52,7 +52,7 @@ define([
         onSync: function () {
           this.addGalleryViews();
           this.addCredits();
-          this.addContinue();
+         // this.addContinue();
           this.images.loadGallery();
           this.rePosition();
         },
@@ -65,20 +65,26 @@ define([
               case 'video':
               {
                 View = GalleryVideo;
+                i = new View({
+                  model: item
+                });
+                this.items.push(i);
+                this.$box.append(i.render().$el);
                 break;
               }
               default:
               {
                 View = GalleryImage;
+                i = new View({
+                  model: item
+                });
+                this.items.push(i);
+                this.$box.append(i.$el);
                 break;
               }
             }
 
-            i = new View({
-              model: item
-            });
-            this.items.push(i);
-            this.$box.append(i.$el);
+
           }, this));
 
         },

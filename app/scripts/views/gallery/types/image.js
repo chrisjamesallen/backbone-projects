@@ -10,7 +10,7 @@ define([
     'use strict';
 
     var GalleryItemView = Backbone.View.extend({
-        template: JST['app/scripts/templates/gallery_item.ejs'],
+        template: JST['app/scripts/templates/gallery_item_image.ejs'],
         className: 'item',
         events: {
             'mouseenter .cell img': 'showFooter',
