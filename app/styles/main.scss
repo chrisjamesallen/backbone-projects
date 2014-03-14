@@ -516,7 +516,7 @@ a,a:visited{
 
     .arrow.left{
         left:50%;
-        margin:0px 0 0 -120px;
+        margin:0px 0 0 -140px;
         padding:0;
         width: 120px;
         height: 120px;
@@ -534,7 +534,7 @@ a,a:visited{
 
 
     .item .title{
-    font-size:$font-s1* 0.25;
+    font-size:$font-s1* 0.35;
     line-height:$font-l1* 0.3;
     }
 
@@ -549,7 +549,7 @@ a,a:visited{
     }
 
   .item .player{
-    width:40%;
+    width:50%;
     position: absolute;
   }
 
