@@ -1,90 +1,107 @@
 window.ActivityIndicator = Backbone.View.extend({
-  className: 'spinner',
-  assets: {
-    default: {
-      white: "images/spinner-black.png",
-      black: "images/spinner-white.png"
-    }
+    className: 'spinner',
+    assets: {
+        default: {
+            white: "images/spinner-black.png",
+            black: "images/spinner-white.png"
+        }
 
 
-  },
-  initialize: function (args) {
-    this.super('initialize');
-    this.$el.hide();
-    this.loading = $.Deferred();
-    this.options = args;
-    if (args.width && args.height) {
-      this.setSize(args.width, args.height);
-    }
-    this.checkInverted();
-    this.active();
-    return this;
-  },
+    },
+    initialize: function(args) {
+        this.super('initialize');
+        this.$el.hide();
+        this.loading = $.Deferred();
+        this.options = args;
+        if (args.width && args.height) {
+            this.setSize(args.width, args.height);
+        }
+        this.checkInverted();
+        this.active();
+        return this;
+    },
 
-  setSize: function (w, h) {
-    this.$el.css({width: w, height: h});
-  },
+    setSize: function(w, h) {
+        this.$el.css({
+            width: w,
+            height: h
+        });
+    },
 
-  checkInverted: function () {
-    if (this.options.inverted) {
-      this.$el.css('background-image', 'url(' + this.assets.default.white + ')');
-    } else {
-      this.$el.css('background-image', 'url(' + this.assets.default.black + ')');
-    }
-    this.$el.addClass('spin');
-  },
+    checkInverted: function() {
+        if (this.options.inverted) {
+            this.$el.css('background-image', 'url(' + this.assets.
+                default.white + ')');
+        } else {
+            this.$el.css('background-image', 'url(' + this.assets.
+                default.black + ')');
+        }
+        this.$el.addClass('spin');
+    },
 
-  waited: function () {
-    this.show();
-  },
+    waited: function() {
+        this.show();
+    },
 
-  show: function () {
-    if (this.loading.state() === 'pending') {
-      this.$el.fadeIn();
-    }
-    return this;
-  },
+    show: function() {
+        if (this.loading.state() === 'pending') {
+            this.$el.fadeIn();
+        }
+        return this;
+    },
 
-  hide: function () {
-    this.loading.resolve();
-    this.$el.fadeOut();
-  },
+    hide: function() {
+        this.loading.resolve();
+        this.$el.fadeOut();
+    },
 
-  force_hide: function () {
-    this.loading.resolve();
-    this.$el.hide();
-  },
+    force_show: function() {
+        this.loading.resolve();
+        this.$el.show().opacity(1);
+    },
 
-  center: function () {
-    this.$el.css({top: '50%', left: '50%', 'text-align': 'center'});
-    this.$el.css({'margin-left': -this.$el.width() * 0.5, 'margin-top': -this.$el.height() * 0.5 });
-    return this;
-  },
 
-  active: function () {
-    this.super('active');
-  },
+    force_hide: function() {
+        this.loading.resolve();
+        this.$el.hide();
+    },
 
-  on_resize: function(){
+    center: function() {
+        this.$el.css({
+            top: '50%',
+            left: '50%',
+            'text-align': 'center'
+        });
+        this.$el.css({
+            'margin-left': -this.$el.width() * 0.5,
+            'margin-top': -this.$el.height() * 0.5
+        });
+        return this;
+    },
 
-  },
+    active: function() {
+        this.super('active');
+    },
 
-  render: function () {
-    _.delay(_.bind(this.waited, this), 1000);
-    this.center();
-    return this;
-  },
+    on_resize: function() {
 
-  spin: function () {
-    this.$el.addClass('spin');
-    return  this;
-  },
+    },
 
-  leave: function () {
-    this.super('leave');
-  },
+    render: function() {
+        _.delay(_.bind(this.waited, this), 1000);
+        this.center();
+        return this;
+    },
 
-  destroy: function () {
-  }
+    spin: function() {
+        this.$el.addClass('spin');
+        return this;
+    },
+
+    leave: function() {
+        this.super('leave');
+    },
+
+    destroy: function() {}
 
 });

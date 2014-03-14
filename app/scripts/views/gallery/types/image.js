@@ -18,24 +18,27 @@ define([
         },
 
         initialize: function() {
-            $(window).on('resize', _.bind(this.resize, this));
             this.$el.html(this.template());
-            this.resize();
+            this.onResize();
             this.listenTo(this.model, 'change:saved', _.bind(this.render, this));
+            this.active();
             return this;
         },
 
         render: function() {
-            this.$el.html(this.template());
+            this.super('render');
             this.$cell = this.$('.cell');
             this.$cell.empty().opacity(0);
             this.$cell.append(this.model.get('img'));
             _.defer(_.bind(function() {
-                this.$cell.animate({'opacity':1});
+                this.$cell.animate({
+                    'opacity': 1
+                });
             }, this));
             this.addFooter();
             this.showFooter();
-            this.resize();
+            this.onResize();
+            this.defer(this.onResize, 100);
             return this;
         },
 
@@ -54,8 +57,8 @@ define([
             this.footer.$('h6').removeClass('visible').addClass('hidden');
         },
 
-        resize: function() {
-            if(this.$('img').length) {
+        onResize: function() {
+            if (this.$('img').length) {
                 var targetW = $(window).width() * 0.85;
                 var boundaryW = $(window).width() * 0.9;
                 var targetH = $(window).height() * 0.85;

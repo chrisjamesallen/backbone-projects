@@ -23,7 +23,9 @@ define([
         },
         render: function() {
             this.super('render');
+            this.gallery.active();
             this.gallery.render(this.$('#Gallery-container'));
+
             return this;
         }
     });

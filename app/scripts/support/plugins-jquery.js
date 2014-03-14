@@ -43,7 +43,7 @@
 
             $that.css3({
                 'transition-duration': '0s',
-                'transition':'0s'
+                'transition': '0s'
             });
 
             for (var prop in animationCss) {
@@ -96,7 +96,7 @@
     }
 
     function setDurationFromOptions(obj, duration) {
-        //	console.warn('setDurationFromOptions' + ''+ duration);
+        //  console.warn('setDurationFromOptions' + ''+ duration);
         $(obj).css3({
             'transition-duration': duration + 'ms'
         });
@@ -228,10 +228,10 @@
         });
 
         return this.queue(function(next, hooks) {
-                var timeout = setTimeout(next, time);
-                hooks.stop = function() {
-                    clearTimeout(timeout);
-                };
+            var timeout = setTimeout(next, time);
+            hooks.stop = function() {
+                clearTimeout(timeout);
+            };
         });
     };
 
@@ -283,33 +283,21 @@
 
 
     $.prototype.suspend = function() {
-      this.suspendCSS3();
-      return this;
+        this.suspendCSS3();
+        return this;
     };
 
-    $.prototype.clearQueue_= $.prototype.clearQueue;
+    $.prototype.clearQueue_ = $.prototype.clearQueue;
 
     $.prototype.clearQueue = function() {
-      this.suspendCSS3();
-      this.clearQueue_();
-      return this;
+        this.suspendCSS3();
+        this.clearQueue_();
+        return this;
     };
 
     init();
 
 })(jQuery);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -363,7 +351,7 @@
     $.prototype.fadeIn = function() {
         $(this).css({
             'opacity': 0
-        }).delay(1).animate({
+        }).animate({
             'opacity': 1
         });
         $(this).css('display', 'inline-block');
@@ -371,12 +359,12 @@
     };
 
     $.prototype.fadeOut = function() {
-      $(this).animate({
+        $(this).animate({
             'opacity': 0
-      }).queue(function(){
+        }).queue(function() {
             $(this).css('display', 'none');
-      });
-      return $(this);
+        });
+        return $(this);
     };
 
     $.prototype.color = function(color) {
@@ -649,28 +637,28 @@
     };
 
 
-  $.extend({
-    replaceTag: function (currentElem, newTagObj, keepProps) {
-      var $currentElem = $(currentElem);
-      var i, $newTag = $(newTagObj).clone();
-      if (keepProps) {//{{{
-        newTag = $newTag[0];
-        newTag.className = currentElem.className;
-        $.extend(newTag.classList, currentElem.classList);
-        $.extend(newTag.attributes, currentElem.attributes);
-      }//}}}
-      $currentElem.wrapAll($newTag);
-      $currentElem.contents().unwrap();
-      return node;
-    }
-  });
+    $.extend({
+        replaceTag: function(currentElem, newTagObj, keepProps) {
+            var $currentElem = $(currentElem);
+            var i, $newTag = $(newTagObj).clone();
+            if (keepProps) { //{{{
+                newTag = $newTag[0];
+                newTag.className = currentElem.className;
+                $.extend(newTag.classList, currentElem.classList);
+                $.extend(newTag.attributes, currentElem.attributes);
+            } //}}}
+            $currentElem.wrapAll($newTag);
+            $currentElem.contents().unwrap();
+            return node;
+        }
+    });
 
-  $.fn.extend({
-    replaceTag: function (newTagObj, keepProps) {
-      this.each(function() {
-        jQuery.replaceTag(this, newTagObj, keepProps);
-      });
-    }
-  });
+    $.fn.extend({
+        replaceTag: function(newTagObj, keepProps) {
+            this.each(function() {
+                jQuery.replaceTag(this, newTagObj, keepProps);
+            });
+        }
+    });
 
 })(jQuery);

@@ -8,9 +8,9 @@ define([
 ], function($, _, Backbone, JST) {
     'use strict';
 
-    var Player = Backbone.View.extend({
-        className: 'player',
-        template: JST['app/scripts/templates/gallery_item_video_player.ejs'],
+    var CardImage = Backbone.View.extend({
+        className: 'image',
+        template: JST['app/scripts/templates/gallery_item_card_image.ejs'],
         DEFAULT_ASPECT: (9 / 14),
 
 
@@ -18,7 +18,7 @@ define([
             this.super('initialize');
             this.spinner = new ActivityIndicator({
                 inverted: false,
-                use_creatures: true,
+                use_creatures: false,
                 width: 20,
                 height: 20
             });
@@ -30,6 +30,7 @@ define([
         active: function() {
             this.super('active');
             this.addListener(this.model, 'change:selected', this.checkSelected);
+            this.addListener(this.model, 'change:saved', this.onImageLoad);
         },
 
         in_active: function() {
@@ -38,58 +39,44 @@ define([
 
         render: function() {
             this.super('render');
-            this.$iframe = this.$('iframe');
-            this.$iframe.opacity(0);
+            this.$image = this.$('iframe');
+            this.$image.opacity(0);
             this.spinner.center();
             this.onResize();
             this.defer(this.onResize);
             this.set('loaded', false);
-            this.addListener(this.$iframe, 'load', this.on_vimeo_load);
             this.renderChildren();
             return this;
         },
 
         checkSelected: function() {
             if (this.model.get('selected')) {
-                this.spinner.force_show();
-                this.defer(this.autoplay, 2000);
-            } else if (!this.model.get('selected') && this.$iframe) {
-                $f(this.$iframe.get(0)).api('pause');
-            }
 
+            }
         },
 
-        autoplay: function() {
-            if (this.$iframe) {
-                $f(this.$iframe.get(0)).api('seekTo', 0);
-                $f(this.$iframe.get(0)).api('play');
-            }
-            this.spinner.$el.hide();
-        },
-
-        on_vimeo_load: function() {
-            this.$iframe.animate({
-                'opacity': 1
-            });
+        onImageLoad: function() {
+            console.log('on image load');
+            this.spinner.hide();
+            var $image = this.model.get('img');
+            var aspect = this.$image.width() / this.$image.height();
+            this.set('aspect', aspect);
+            $image.appendTo(this.$el);
+            $image.width('100%').height('100%');
             this.onResize();
             this.defer(this.onResize);
-            this.spinner.hide();
-            this.removeListener(this.$iframe, 'load');
+            this.removeListener(this.$image, 'load');
             this.checkSelected();
         },
 
         onResize: function() {
-            this.$el.height(this.$el.width() * this.DEFAULT_ASPECT);
+            this.$el.height(this.$el.width() * (this.get('aspect') || this.DEFAULT_ASPECT));
             this.$el.center();
-            console.log('resize');
-        },
+        }
 
-        transition_in: function() {},
-
-        transition_out: function() {}
 
     });
 
 
-    return Player;
+    return CardImage;
 });

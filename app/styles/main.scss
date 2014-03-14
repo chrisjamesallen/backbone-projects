@@ -78,6 +78,7 @@ a,a:visited{
     width:20px;
     height:20px;
     display:inline-block;
+    z-index:10;
 }
 
 @-webkit-keyframes spinnerRotate {
@@ -146,7 +147,6 @@ a,a:visited{
     width:2000%;
     height:inherit;
 
-    display:table;
     -webkit-transition:left 1s;
     -moz-transition:left 1s;
     -ms-transition:left 1s;
@@ -215,17 +215,16 @@ a,a:visited{
     font-family:elucid;
     font-size:30px;
     letter-spacing: 1px;
+
 }
 
 #Box .item img{
-    //@include transition-property(width,height);
-    //@include transition-duration(1s);
-    //@include transition-delay(0.2s);
+
 }
 
 #Box .item .footer{
     left:0px;
-    bottom: 15px;
+    bottom: 40px;
     top: auto;
 
     width:inherit;
@@ -409,6 +408,12 @@ a,a:visited{
 }
 
 
+.item{
+  height: 100%;
+      @include transition-property(opacity);
+    @include transition-duration(1s);
+}
+
 
 .item .player{
   width:60%;
@@ -420,7 +425,30 @@ a,a:visited{
   height: 100%;
 }
 
+.item .title{
 
+    width: 80%;
+
+
+    font-size:$font-s1;
+    line-height:$font-l1;
+    font-family:"elucid";
+    color:#ffffff;
+    letter-spacing: 3px;
+    color:white;
+    z-index:2;
+}
+
+.item .image{
+  width:60%;
+  position: absolute;
+  z-index:1;
+}
+
+.item .image img{
+  width: 100%;
+  height: 100%;
+}
 
 
 
