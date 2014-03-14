@@ -51,8 +51,8 @@ define([
 
         checkSelected: function() {
             if (this.model.get('selected') && this.get('loaded')) {
-                this.spinner.force_show();
-                this.defer(this.autoplay, 2000);
+                //this.spinner.force_show();
+                //this.defer(this.autoplay, 2000);
             } else if (!this.model.get('selected') && this.$iframe) {
                 $f(this.$iframe.get(0)).api('pause');
             }
