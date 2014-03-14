@@ -449,7 +449,9 @@ a,a:visited{
   height: 100%;
 }
 
-
+.footer h6{
+  line-height:16px !important;
+}
 
 
 
@@ -546,7 +548,12 @@ a,a:visited{
 
     .footer{
       bottom: 10px !important;
+
     }
+
+.footer h6{
+  line-height:9px !important;
+}
 
   .item .player{
     width:50%;
