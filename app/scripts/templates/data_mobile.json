@@ -1,55 +1,64 @@
 {
 
-  "title": "",
-  "assets": [
+    "title": "",
+    "assets": [
 
 
-    {
-      "url": "images/desktop/1.jpg",
-      "type": "image",
-      "caption": ""
-    },
+        {
+            "type": "card",
+            "heading": "love remix<br>- ralph lauren",
+            "hasImage": true,
+            "url": "images/desktop/1.jpg"
+        },
+
+        {
+            "type": "video",
+            "vimeo_id": "85676243",
+            "caption": "'Mimi the Donkey and Friends' by Sølve Sundsbø"
+        },
+
+        {
+            "type": "video",
+            "vimeo_id": "41358426",
+            "caption": "Issue 7"
+        },
 
 
-    {
-      "type": "video",
-      "vimeo_id": "85676243",
-      "caption": "'Mimi the Donkey and Friends' by Sølve Sundsbø"
-    },
-
-    {
-      "type": "video",
-      "vimeo_id": "41358426",
-      "caption": ""
-    },
-
-    {
-      "type": "video",
-      "vimeo_id": "59616315",
-      "caption": "'In Bed With Cara'"
-    },
+        {
+            "type": "card",
+            "heading": "brand collaborations",
+            "hasImage": false,
+            "url": "images/desktop/1.jpg"
+        },
 
 
-    {
-      "type": "video",
-      "vimeo_id": "21657823",
-      "caption": "'The Love Thing'"
-    },
 
 
-    {
-      "type": "video",
-      "vimeo_id": "40593855",
-      "caption": "Fan Club"
-    },
+        {
+            "type": "video",
+            "vimeo_id": "59616315",
+            "caption": "'In Bed With Cara'<br>Swarovksi"
+        },
+
+        {
+            "type": "video",
+            "vimeo_id": "40593855",
+            "caption": "'Fan Club'<br>Louis Vuitton"
+        },
+
+        {
+            "type": "video",
+            "vimeo_id": "21657823",
+            "caption": "'The Love Thing'<br>Prada"
+        },
+
+        {
+            "type": "video",
+            "vimeo_id": "40648353",
+            "caption": "'West End Love'<br>Gucci"
+        }
 
 
-    {
-      "type": "video",
-      "vimeo_id": "40648353",
-      "caption": "'West End Love'"
-    }
-
-  ]
+    ]
 
 }

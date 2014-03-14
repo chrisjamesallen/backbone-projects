@@ -40,8 +40,8 @@ define([
             this.super('render');
             this.$iframe = this.$('iframe');
             this.$iframe.opacity(0);
-            this.spinner.center();
             this.onResize();
+            this.spinner.center();
             this.defer(this.onResize);
             this.set('loaded', false);
             this.addListener(this.$iframe, 'load', this.on_vimeo_load);
@@ -50,7 +50,7 @@ define([
         },
 
         checkSelected: function() {
-            if (this.model.get('selected')) {
+            if (this.model.get('selected') && this.get('loaded')) {
                 this.spinner.force_show();
                 this.defer(this.autoplay, 2000);
             } else if (!this.model.get('selected') && this.$iframe) {
@@ -68,6 +68,7 @@ define([
         },
 
         on_vimeo_load: function() {
+            this.set('loaded', true);
             this.$iframe.animate({
                 'opacity': 1
             });
@@ -81,7 +82,6 @@ define([
         onResize: function() {
             this.$el.height(this.$el.width() * this.DEFAULT_ASPECT);
             this.$el.center();
-            console.log('resize');
         },
 
         transition_in: function() {},

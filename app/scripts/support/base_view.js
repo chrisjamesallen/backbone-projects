@@ -122,11 +122,11 @@ define([
 
         renderChildren: function() {
             _.each(this.childViews, _.bind(function(a) {
-                a.render();
                 //check if already in dom
                 if (!jQuery.contains($('body').get(0), a.$el.get(0))) {
                     a.$el.appendTo(this.$el);
                 }
+                a.render();
             }, this));
         },
 

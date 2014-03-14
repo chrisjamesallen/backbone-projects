@@ -43,13 +43,14 @@ body
     text-align:center;
     line-height:27px;
     overflow:hidden;
-    background-color: #121212;
+    background-color: #161616;
     letter-spacing: 3px;
 }
 
 html{
    // overflow:hidden;
-   background-color: #121212;
+  //background-color: #121212;
+
 
 }
 a,a:visited{
@@ -62,7 +63,7 @@ a,a:visited{
 
 
 .cell{
-    display:table-cell;
+    display:inline-block;
     vertical-align:middle;
     text-align:center;
 }
@@ -99,10 +100,12 @@ a,a:visited{
 #Main
 {
     font-family:"GaramondMT",serif;
-    display:table;
+    display:inline-block;
     position:absolute;
     height:100%;
     width:100%;
+    left:0px;
+    top:0px;
     overflow:hidden;
 }
 
@@ -113,7 +116,6 @@ a,a:visited{
 
     display:inline-block;
     position:relative;
-    vertical-align:middle;
     text-align:center;
 }
 
@@ -165,7 +167,7 @@ a,a:visited{
     top: 0%;
     margin:0 0 0 0;
     z-index:10;
-    display:table;
+    display:inline-block;
 }
 
 #Title h1{
@@ -204,8 +206,6 @@ a,a:visited{
     width:auto;
     text-align:center;
 
-    display:table;
-    vertical-align:middle;
     position:absolute;
     color:white;
     //@extend .spinner;
@@ -410,8 +410,9 @@ a,a:visited{
 
 .item{
   height: 100%;
-      @include transition-property(opacity);
-    @include transition-duration(1s);
+  @include transition-property(opacity);
+  @include transition-duration(1s);
+  position: relative;
 }
 
 
@@ -428,8 +429,6 @@ a,a:visited{
 .item .title{
 
     width: 80%;
-
-
     font-size:$font-s1;
     line-height:$font-l1;
     font-family:"elucid";
@@ -467,7 +466,6 @@ a,a:visited{
         width: 120px;
         height: 120px;
         background:transparent url('../images/arrowleft-mobile.png') center center no-repeat;
-        background-color:red;
 
     }
 
@@ -478,7 +476,6 @@ a,a:visited{
         width: 120px;
         height: 120px;
         background:transparent url('../images/arrowright-mobile.png') center center no-repeat;
-        background-color:red;
 
     }
 
@@ -486,23 +483,24 @@ a,a:visited{
 
 @media screen and (max-width: 568px){
 
+    html, body{
+      overflow: hidden;
+      letter-spacing: 1px;
+    }
+
     #Share .fb-like {
         display:block!important
     }
 
-    #Title h1 {
-        font-size:$font-s1 * 0.4;
-        line-height:$font-l1 * 0.4;
-    }
 
     #Box .credits .s1, #Box .credits .s2 {
-        font-size: $font-s2 * 0.45;
-        line-height: $font-l2  * 0.45;
+        font-size: $font-s2 * 0.2;
+        line-height: $font-l2  * 0.2;
     }
 
     #Box .credits .s2 {
-        font-size: $font-s3  * 0.45;
-        line-height: $font-l3  * 0.45;
+        font-size: $font-s3  * 0.2;
+        line-height: $font-l3  * 0.2;
     }
 
     #Gallery #Navigation{
@@ -518,34 +516,56 @@ a,a:visited{
 
     .arrow.left{
         left:50%;
-        margin:0 0 0 -120px;
+        margin:0px 0 0 -120px;
         padding:0;
         width: 120px;
         height: 120px;
         background:transparent url('../images/arrowleft-mobile.png') center center no-repeat;
-        //background-color:red;
     }
 
     .arrow.right{
         left:50%;
         right:auto;
-        margin:0 0 0 20px;
+        margin:0px 0 0 20px;
         width: 120px;
         height: 120px;
         background:transparent url('../images/arrowright-mobile.png') center center no-repeat;
-        //background-color:red;
     }
 
+
+    .item .title{
+    font-size:$font-s1* 0.25;
+    line-height:$font-l1* 0.3;
+    }
+
+
+    h6{
+      font-size: 6px !important;
+      line-height:9px;
+    }
+
+    .footer{
+      bottom: 10px !important;
+    }
+
+  .item .player{
+    width:40%;
+    position: absolute;
+  }
 
 }
 
 
-//Ipad
+// //Ipad
 
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
 
+    .item .title{
+    font-size:$font-s1* 0.9;
+    line-height:$font-l1* 0.9;
+    }
 
     #Gallery #Navigation{
         top:auto;
@@ -559,7 +579,7 @@ and (max-device-width : 1024px) {
         padding:0;
         width: 120px;
         height: 120px;
-        background:transparent url('../images/arrowleft-mobile.png') center center no-repeat;
+        background:transparent url('../images/arrowleft.png') center center no-repeat;
        // background-color:red;
     }
 
@@ -569,7 +589,7 @@ and (max-device-width : 1024px) {
         margin:0 0 0 20px;
         width: 120px;
         height: 120px;
-        background:transparent url('../images/arrowright-mobile.png') center center no-repeat;
+        background:transparent url('../images/arrowright.png') center center no-repeat;
         //background-color:red;
     }
 }
@@ -578,20 +598,13 @@ and (max-device-width : 1024px) {
 @media screen
 and (max-height: 640px)
 and (min-width: 568px){
-    #Title h1 {
-        font-size:100px * 0.6;
-        line-height:115px * 0.6;
-    }
 
     #Box .credits .s1, #Box .credits .s2 {
-        font-size: $font-s2 * 0.7;
-        line-height: $font-l2  * 0.7;
+        font-size: $font-s2 * 0.1;
+        line-height: $font-l2  * 0.1;
     }
 
-    #Box .credits .s2 {
-        font-size: $font-s3  * 0.7;
-        line-height: $font-l3  * 0.7;
-    }
+
 }
 
 

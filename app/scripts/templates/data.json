@@ -4,11 +4,23 @@
     "assets": [
 
 
+        {
+            "type": "card",
+            "heading": "love remix<br>- ralph lauren",
+            "hasImage": true,
+            "url": "images/desktop/1.jpg"
+        },
 
         {
             "type": "video",
             "vimeo_id": "85676243",
             "caption": "'Mimi the Donkey and Friends' by Sølve Sundsbø"
+        },
+
+        {
+            "type": "video",
+            "vimeo_id": "41358426",
+            "caption": "Issue 7"
         },
 
 
@@ -19,19 +31,8 @@
             "url": "images/desktop/1.jpg"
         },
 
-        {
-            "type": "card",
-            "heading": "love remix<br>- ralph lauren",
-            "hasImage": true,
-            "url": "images/desktop/1.jpg"
-        },
 
 
-        {
-            "type": "video",
-            "vimeo_id": "41358426",
-            "caption": "Issue 7"
-        },
 
         {
             "type": "video",
@@ -56,6 +57,7 @@
             "vimeo_id": "40648353",
             "caption": "'West End Love'<br>Gucci"
         }
+
 
     ]
 

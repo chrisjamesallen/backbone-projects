@@ -19,7 +19,7 @@ define([
         },
         resize: function() {
             this.$el.width($(window).width());
-            this.$p = this.$('p');
+            this.$p = this.$('.s1');
             this.$('.cell').height($(window).height());
             this.$('.cell').width($(window).width());
             var i = this.model.collection.indexOf(this.model);
@@ -27,6 +27,10 @@ define([
                 'left': (i) * $(window).width(),
                 'height': $(window).height()
             });
+            this.$p.center();
+        },
+        onResize: function() {
+
         },
         show: function() {
             this.$el.show();

@@ -47,13 +47,13 @@ define([
 
         render: function() {
             this.super('render');
-            this.$el.show().opacity(0);
+            this.$el.hidden();
             this.renderChildren();
             this.$title = this.$('.title');
             this.onResize();
             this.defer(this.onResize);
             this.delegateEvents(this.events_active);
-            this.defer(this.transitionIn, 2000);
+            this.defer(this.transitionIn, 1000);
             return this;
         },
 
@@ -62,8 +62,7 @@ define([
             this.$title.center();
             this.$el.width($(window).width());
             this.$el.css({
-                'left': i * $(window).width(),
-                'height': $(window).height()
+                'left': i * $(window).width()
             });
         },
 

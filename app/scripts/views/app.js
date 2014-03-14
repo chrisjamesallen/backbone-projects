@@ -24,10 +24,14 @@ define([
         render: function() {
             this.super('render');
             this.gallery.active();
-            this.gallery.render(this.$('#Gallery-container'));
-
+            this.gallery.$el.appendTo(this.$('#Gallery-container'));
+            this.defer(this.addGallery);
             return this;
+        },
+        addGallery: function() {
+            this.gallery.render();
         }
+
     });
 
     return AppView;

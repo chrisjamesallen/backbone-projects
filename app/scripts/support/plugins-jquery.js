@@ -491,10 +491,17 @@
                 top: '50%',
                 left: '50%'
             });
+            if ($(this).parent().length) {
+                $(this).css({
+                    left: $(this).parent().width() * 0.5,
+                    top: $(this).parent().height() * 0.5
+                })
+            }
             $(this).css({
                 top: '+=' + $(this).origin().y,
                 left: '+=' + $(this).origin().x
             });
+
         }
         if (axis === 'x') {
             $(this).css({

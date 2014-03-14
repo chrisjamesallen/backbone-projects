@@ -66,8 +66,8 @@ define([
         render: function() {
             this.super('render');
             this.addFooter();
-            this.renderChildren();
             this.onResize();
+            this.renderChildren();
             this.defer(this.onResize);
             this.delegateEvents(this.events_active);
             return this;
@@ -77,8 +77,7 @@ define([
             var i = this.model.collection.indexOf(this.model);
             this.$el.width($(window).width());
             this.$el.css({
-                'left': i * $(window).width(),
-                'height': $(window).height()
+                'left': i * $(window).width()
             });
         },
 

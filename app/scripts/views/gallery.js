@@ -29,7 +29,7 @@ define([
                 this.listenTo(this.images.collection, 'sync', _.bind(this.onSync, this));
                 this.listenTo(this.images.collection, 'change:saved', _.bind(this.showButtons, this));
                 this.listenTo(this.images.collection, 'change:selected', _.bind(this.showButtons, this));
-                if (Modernizr.touch) {
+                if (!Modernizr.touch) {
                     $(window).on('mousemove', _.debounce(_.bind(this.onIdle, this), 2000));
                     $(window).on('mousemove', _.debounce(_.bind(this.onActive, this), 2000, true));
                 }
@@ -38,7 +38,6 @@ define([
             render: function($parent) {
                 this.super('render');
                 this.undelegateEvents();
-                this.$el.appendTo($parent);
                 this.images = new Images();
                 this.$box = this.$('#Box');
                 this.$navigation = this.$('#Navigation');
@@ -72,7 +71,7 @@ define([
                                     model: item
                                 });
                                 this.items.push(i);
-                                this.$box.append(i.render().$el);
+                                this.$box.append(i.$el);
                                 break;
                             }
                         case 'video':
@@ -82,7 +81,7 @@ define([
                                     model: item
                                 });
                                 this.items.push(i);
-                                this.$box.append(i.render().$el);
+                                this.$box.append(i.$el);
                                 break;
                             }
                         default:
@@ -96,6 +95,8 @@ define([
                                 break;
                             }
                     }
+
+                    i.render();
 
 
                 }, this));
