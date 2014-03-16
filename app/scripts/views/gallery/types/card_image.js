@@ -56,7 +56,7 @@ define([
         onImageLoad: function() {
             this.spinner.hide();
           var $image = this.$image = this.model.get('img');
-          var aspect =  $image[0].height / $image[0].width;
+          var aspect = $image[0].width /  $image[0].height;
           console.log('on image load', aspect);
           this.set('aspect', aspect);
             $image.appendTo(this.$el);
@@ -67,14 +67,36 @@ define([
             this.checkSelected();
         },
 
-        onResize: function() {
-            this.$el.height(this.$el.width() * (this.get('aspect') || this.DEFAULT_ASPECT));
-            this.$el.center();
+//        onResize: function() {
+//            this.$el.height(this.$el.width() * (this.get('aspect') || this.DEFAULT_ASPECT));
+//            this.$el.center();
+//        }  ,
+
+      onResize: function() {
+        this.$el.height(this.$el.width() * (this.get('aspect') || this.DEFAULT_ASPECT));
+        if (this.$('img').length) {
+          var targetW = $(window).width() * 0.85;
+          var boundaryW = $(window).width() * 0.9;
+          var targetH = $(window).height() * 0.7;
+          var w = this.$('img').width();
+          var h = this.$('img').height();
+          var aspect = this.get('aspect');
+
+          //check if target height works to width
+          if (targetH * aspect < boundaryW) {
+            //..use height target
+            this.$el.width(targetH * aspect);
+            this.$el.height(targetH);
+          } else {
+            this.$el.width(targetW);
+            this.$el.height(targetW / aspect);
+          }
         }
+        this.$el.center();
+      }
 
 
     });
 
-
-    return CardImage;
+  return CardImage;
 });

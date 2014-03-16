@@ -136,15 +136,25 @@ define([
                 });
 
 
-                if (i >= this.images.collection.length - 1) {
-                    this.$navigation.$right.hide();
+              if (i <= 0) {
+                this.$navigation.$left.hide();
+              } else {
+                if (!this.hasShowTitle) {
+                  $('#Title h1, #note').css('opacity', 0);
+                  _.delay(_.bind(this.hideTitle, this), 2000);
+                  this.hasShowTitle = true;
                 }
-                if (i <= 0) {
-                    this.$navigation.$left.hide();
-                }
+              }
+
+              if (i >= this.images.collection.length - 1) {
+                this.$navigation.$right.hide();
+              }
 
             },
 
+          hideTitle: function() {
+            $('#Title').hide();
+          },
 
 
             turnOnCreatures: function() {

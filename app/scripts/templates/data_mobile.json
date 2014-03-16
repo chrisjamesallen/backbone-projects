@@ -1,64 +1,106 @@
 {
 
-    "title": "",
-    "assets": [
+  "title": "",
+  "assets": [
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/1.jpg",
+      "caption": ""
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/2.jpg",
+      "caption": ""
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/3.jpg",
+      "caption": "Violette Esmeralda - <a href='http://instagram.com/violette_esmeralda' target='_blank'>@violette_esmeralda</a>"
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/4.jpg",
+      "caption": "Anna Brimma - <a href='http://instagram.com/annabrimma' target='_blank'>@annabrimma</a>"
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/5.jpg",
+      "caption": "Chen Yu - <a href='http://instagram.com/yu_chen' target='_blank'>@yu_chen</a>"
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/6.jpg",
+      "caption": "John Bestley - <a href='http://instagram.com/jonathanbestley' target='_blank'>@jonathanbestley</a>"
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/7.jpg",
+      "caption": ""
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/8.jpg",
+      "caption": "Lottie Eunice - <a href='http://instagram.com/lottie_useless' target='_blank'>@lottie_useless</a>"
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/9.jpg",
+      "caption": "Emma Chitty - <a href='http://instagram.com/' target='_blank'>@shugahigh</a>"
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/10.jpg",
+      "caption": "Jakob Landvik - <a href='http://instagram.com/' target='_blank'>@jakobland</a>"
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/11.jpg",
+      "caption": "Hannah Marsden - <a href='http://instagram.com/' target='_blank'>iwannabewheretheb0ysare</a>"
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/12.jpg",
+      "caption": "Nuha Ruby Ra - <a href='http://instagram.com/' target='_blank'>nuharubyra</a>"
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/13.jpg",
+      "caption": "Cora Corre - <a href='http://instagram.com/' target='_blank'>@coracorre</a>"
+    },
+
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/mobile/14.jpg",
+      "caption": "Amanda Henry - <a href='http://instagram.com/' target='_blank'>@amanda_noreenx</a>"
+    }
 
 
-        {
-            "type": "card",
-            "heading": "love remix<br>- ralph lauren",
-            "hasImage": true,
-            "url": "images/desktop/1.jpg"
-        },
-
-        {
-            "type": "video",
-            "vimeo_id": "85676243",
-            "caption": "'Mimi the Donkey and Friends' by Sølve Sundsbø"
-        },
-
-        {
-            "type": "video",
-            "vimeo_id": "41358426",
-            "caption": "Issue 7"
-        },
-
-
-        {
-            "type": "card",
-            "heading": "brand collaborations",
-            "hasImage": false,
-            "url": "images/desktop/1.jpg"
-        },
-
-
-
-
-        {
-            "type": "video",
-            "vimeo_id": "59616315",
-            "caption": "'In Bed With Cara'<br>Swarovksi"
-        },
-
-        {
-            "type": "video",
-            "vimeo_id": "40593855",
-            "caption": "'Fan Club'<br>Louis Vuitton"
-        },
-
-        {
-            "type": "video",
-            "vimeo_id": "21657823",
-            "caption": "'The Love Thing'<br>Prada"
-        },
-
-        {
-            "type": "video",
-            "vimeo_id": "40648353",
-            "caption": "'West End Love'<br>Gucci"
-        }
-
-
-    ]
+  ]
 
 }

@@ -167,6 +167,7 @@ a,a:visited{
     margin:0 0 0 0;
     z-index:10;
     display:inline-block;
+    text-align:center;
 }
 
 #Title h1{
@@ -256,7 +257,7 @@ a,a:visited{
   position: absolute !important;
 }
 .credit{
-  width: 50%;
+  width: 60%;
 }
 
 
@@ -499,15 +500,11 @@ a,a:visited{
     }
 
 
-    #Box .credits .s1, #Box .credits .s2 {
-        font-size: $font-s2 * 0.2;
-        line-height: $font-l2  * 0.2;
-    }
+  #Box .credits .s2, #Box .credits .s1 {
+    font-size: $font-s3  * 0.4;
+    line-height: $font-l3  * 0.4;
+  }
 
-    #Box .credits .s2 {
-        font-size: $font-s3  * 0.2;
-        line-height: $font-l3  * 0.2;
-    }
 
     #Gallery #Navigation{
         top:auto;
@@ -544,8 +541,13 @@ a,a:visited{
     line-height:$font-l1* 0.3;
     }
 
+  #Title h1{
+    font-size:$font-s1* 0.35;
+    line-height:$font-l1* 0.3;
+  }
 
-    h6{
+
+  h6{
       font-size: 6px !important;
       line-height:9px;
     }
@@ -610,10 +612,6 @@ and (max-device-width : 1024px) {
 and (max-height: 640px)
 and (min-width: 568px){
 
-    #Box .credits .s1, #Box .credits .s2 {
-        font-size: $font-s2 * 0.1;
-        line-height: $font-l2  * 0.1;
-    }
 
 
 }
@@ -640,7 +638,17 @@ and (max-device-width : 568px) {
 
 }
 
+@media screen
+and (min-width: 568px)
+and (max-height: 840px)
+{
 
+  #Box .credits .s2, #Box .credits .s1 {
+    font-size: $font-s3  * 0.7;
+    line-height: $font-l3  * 0.7;
+  }
+
+}
 
 
 
