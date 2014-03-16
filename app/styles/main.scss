@@ -177,7 +177,17 @@ a,a:visited{
     color:#ffffff;
     letter-spacing: 3px;
     color:white;
-    @include transition-property(opacity);
+        @include transition-property(opacity);
+    @include transition-duration(1s);
+}
+
+#Title h3{
+    font-size:$font-s2;
+    line-height:$font-l2; 
+    font-family:"elucid";   
+    color:#ffffff;
+    letter-spacing: 2px;
+        @include transition-property(opacity);
     @include transition-duration(1s);
 }
 
@@ -565,6 +575,22 @@ a,a:visited{
     width:50%;
     position: absolute;
   }
+
+#Title h1{
+    padding-bottom:30px;
+
+}
+
+#Title h3{
+    font-size:$font-s2* 0.4;
+    line-height:$font-l2* 0.4;
+    letter-spacing: 1px;
+}
+
+#note{
+ font-size:$font-s2* 0.7;
+}
+
 
 }
 

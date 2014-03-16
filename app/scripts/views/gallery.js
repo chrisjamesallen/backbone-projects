@@ -48,6 +48,7 @@ define([
                 this.images.fetch();
                 this.onActive();
                 this.onResize();
+                this.defer(this.onResize);
                 window.gallery = this;
                 return this;
             },
@@ -57,6 +58,9 @@ define([
                 this.addCredits();
                 this.addContinue();
                 this.images.loadGallery();
+                this.defer(this.onResize);
+                this.onResize();
+
             },
 
             addGalleryViews: function() {
@@ -136,25 +140,25 @@ define([
                 });
 
 
-              if (i <= 0) {
-                this.$navigation.$left.hide();
-              } else {
-                if (!this.hasShowTitle) {
-                  $('#Title h1, #note').css('opacity', 0);
-                  _.delay(_.bind(this.hideTitle, this), 2000);
-                  this.hasShowTitle = true;
+                if (i <= 0) {
+                    this.$navigation.$left.hide();
+                } else {
+                    if (!this.hasShowTitle) {
+                        $('#Title h1,#Title h3, #note').css('opacity', 0);
+                        _.delay(_.bind(this.hideTitle, this), 2000);
+                        this.hasShowTitle = true;
+                    }
                 }
-              }
 
-              if (i >= this.images.collection.length - 1) {
-                this.$navigation.$right.hide();
-              }
+                if (i >= this.images.collection.length - 1) {
+                    this.$navigation.$right.hide();
+                }
 
             },
 
-          hideTitle: function() {
-            $('#Title').hide();
-          },
+            hideTitle: function() {
+                $('#Title').hide();
+            },
 
 
             turnOnCreatures: function() {
