@@ -6,7 +6,7 @@ define([
         'templates',
         'collections/images',
         'views/gallery/types/card',
-        'views/gallery/types/image',
+        'views/gallery/types/picture',
         'views/gallery/types/video',
         'views/gallery/credits',
         'views/gallery/continue',
