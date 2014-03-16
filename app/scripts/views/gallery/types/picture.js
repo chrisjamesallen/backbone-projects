@@ -61,6 +61,10 @@ define([
     },
 
 
+    hideFooter: function() {
+      this.footer.$('h6').removeClass('visible').addClass('hidden');
+    },
+
     render: function () {
       this.super('render');
       this.$el.hidden();

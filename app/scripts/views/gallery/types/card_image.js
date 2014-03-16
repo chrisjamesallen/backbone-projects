@@ -39,8 +39,6 @@ define([
 
         render: function() {
             this.super('render');
-            this.$image = this.$('iframe');
-            this.$image.opacity(0);
             this.spinner.center();
             this.onResize();
             this.defer(this.onResize);
@@ -56,11 +54,11 @@ define([
         },
 
         onImageLoad: function() {
-            console.log('on image load');
             this.spinner.hide();
-            var $image = this.model.get('img');
-            var aspect = this.$image.width() / this.$image.height();
-            this.set('aspect', aspect);
+          var $image = this.$image = this.model.get('img');
+          var aspect =  $image[0].height / $image[0].width;
+          console.log('on image load', aspect);
+          this.set('aspect', aspect);
             $image.appendTo(this.$el);
             $image.width('100%').height('100%');
             this.onResize();
