@@ -19,15 +19,15 @@ define([
         },
         resize: function() {
             this.$el.width($(window).width());
-            this.$p = this.$('.s1');
-            this.$('.cell').height($(window).height());
-            this.$('.cell').width($(window).width());
+//            this.$p = this.$('.s1');
+//            this.$('.cell').height($(window).height());
+//            this.$('.cell').width($(window).width());
             var i = this.model.collection.indexOf(this.model);
             this.$el.css({
                 'left': (i) * $(window).width(),
                 'height': $(window).height()
             });
-            this.$p.center();
+            this.$('.credit').center();
         },
         onResize: function() {
 

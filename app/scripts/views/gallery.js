@@ -55,7 +55,7 @@ define([
             onSync: function() {
                 this.addGalleryViews();
                 this.addCredits();
-                // this.addContinue();
+                this.addContinue();
                 this.images.loadGallery();
             },
 
@@ -172,6 +172,7 @@ define([
             },
 
             onResize: function() {
+                this.$('#Title').center();
                 this.$box.css({
                     'left': -($(window).width() * _.max([this.images.getPageIndex(), 0])),
                     'height': $(window).height()

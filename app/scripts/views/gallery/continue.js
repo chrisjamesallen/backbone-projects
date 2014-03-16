@@ -27,6 +27,7 @@ define([
                 'left': (i) * $(window).width(),
                 'height': $(window).height()
             });
+            this.$('.cell').center();
         },
     });
 

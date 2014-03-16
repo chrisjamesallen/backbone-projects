@@ -3,8 +3,7 @@
   "title": "",
   "assets": [
     {
-      "type": "card",
-      "heading": "Impressive Instant",
+      "type": "image",
       "hasImage": true,
       "url": "images/desktop/1.jpg",
       "caption": ""
