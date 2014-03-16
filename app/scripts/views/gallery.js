@@ -186,11 +186,11 @@ define([
             },
 
             onResize: function() {
-                this.$('#Title').center();
                 this.$box.css({
                     'left': -($(window).width() * _.max([this.images.getPageIndex(), 0])),
                     'height': $(window).height()
                 });
+                this.$('#Title').center();
             },
 
             onActive: function() {
