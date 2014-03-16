@@ -1,64 +1,113 @@
 {
 
-    "title": "",
-    "assets": [
+  "title": "",
+  "assets": [
+    {
+      "type": "card",
+      "heading": "Impressive Instant",
+      "hasImage": true,
+      "url": "images/desktop/1.jpg",
+      "caption": ""
+    },
 
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/2.jpg",
+      "caption": ""
+    },
 
-        {
-            "type": "card",
-            "heading": "love remix<br>- ralph lauren",
-            "hasImage": true,
-            "url": "images/desktop/1.jpg"
-        },
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/3.jpg",
+      "caption": "Violette Esmeralda - <a href='http://instagram.com/violette_esmeralda' target='_blank'>@violette_esmeralda</a>"
+    },
 
-        {
-            "type": "video",
-            "vimeo_id": "85676243",
-            "caption": "'Mimi the Donkey and Friends' by Sølve Sundsbø"
-        },
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/4.jpg",
+      "caption": "Anna Brimma - <a href='http://instagram.com/annabrimma' target='_blank'>@annabrimma</a>"
+    },
 
-        {
-            "type": "video",
-            "vimeo_id": "41358426",
-            "caption": "Issue 7"
-        },
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/5.jpg",
+      "caption": "Chen Yu - <a href='http://instagram.com/yu_chen' target='_blank'>@yu_chen</a>"
+    },
 
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/6.jpg",
+      "caption": "John Bestley - <a href='http://instagram.com/jonathanbestley' target='_blank'>@jonathanbestley</a>"
+    },
 
-        {
-            "type": "card",
-            "heading": "brand collaborations",
-            "hasImage": false,
-            "url": "images/desktop/1.jpg"
-        },
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/7.jpg",
+      "caption": ""
+    },
 
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/8.jpg",
+      "caption": "Lottie Eunice - <a href='http://instagram.com/lottie_useless' target='_blank'>lottie_useless</a>"
+    },
 
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/9.jpg",
+      "caption": "Emma Chitty - <a href='http://instagram.com/' target='_blank'>shugahigh</a>"
+    },
 
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/10.jpg",
+      "caption": "Jakob Landvik - <a href='http://instagram.com/' target='_blank'>jakobland</a>"
+    },
 
-        {
-            "type": "video",
-            "vimeo_id": "59616315",
-            "caption": "'In Bed With Cara'<br>Swarovksi"
-        },
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/11.jpg",
+      "caption": "Hannah Marsden - <a href='http://instagram.com/' target='_blank'>iwannabewheretheb0ysare</a>"
+    },
 
-        {
-            "type": "video",
-            "vimeo_id": "40593855",
-            "caption": "'Fan Club'<br>Louis Vuitton"
-        },
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/12.jpg",
+      "caption": "Nuha Ruby Ra - <a href='http://instagram.com/' target='_blank'>nuharubyra</a>"
+    },
 
-        {
-            "type": "video",
-            "vimeo_id": "21657823",
-            "caption": "'The Love Thing'<br>Prada"
-        },
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/13.jpg",
+      "caption": "Cora Corre - <a href='http://instagram.com/' target='_blank'>coracorre</a>"
+    },
 
-        {
-            "type": "video",
-            "vimeo_id": "40648353",
-            "caption": "'West End Love'<br>Gucci"
-        }
+    {
+      "type": "image",
+      "hasImage": true,
+      "url": "images/desktop/14.jpg",
+      "caption": "Amanda Henry - <a href='http://instagram.com/' target='_blank'>amanda_noreenx</a>"
+    },
 
+    {
+      "type": "card",
+      "heading": "",
+      "hasImage": false,
+      "sub_text": "Photography Boo George<br> Fashion Editor Anders Sølvsten Thomsen<br> Cast on instagram, shot in London<br> Hair Lyndell Mansfield<br> Make up Lotten Holmqvist<br> Casting Madeleine Østlie, Phoebe Arnold and Anders Sølvsten Thomsen<br> Models <br>Amanda Henry, Anna Brimma, Cora Corre, <br>Elizabeth Ilsley, Emma Chitty, Hannah Marsden,<br> Jakob Landvik, John Bestley, Josh Quinton,<br> Lottie Eunice, Max Granger at AMCK, Nuha Ruby Ra,<br> Violette Esmeralda and Yu Chen Set Design Thomas Petherick<br> Photographic assistance Tom Sloan and Matthew Joy<br> Digital Technician Sean Geraghty<br> Fashion assistance Karolina Frechowicz, Rudy Betty and Viktorija Tomasevic<br> Hair assistance Meggie Cousland and Jazmin Lenyero<br>Make up assistance Amber Pitkin and Calli Paice<br>Set assistance Elli Rawlingson<br>Retouching Kasia Kret at Studio Invisible<br>Production Justine Bayley at Streeters London<br>Special thanks to Big Sky Studios"
+    }
 
-    ]
+  ]
 
 }

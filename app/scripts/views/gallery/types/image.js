@@ -18,6 +18,7 @@ define([
         },
 
         initialize: function() {
+            this.super('initialize');
             this.$el.html(this.template());
             this.onResize();
             this.listenTo(this.model, 'change:saved', _.bind(this.render, this));
