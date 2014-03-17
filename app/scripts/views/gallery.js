@@ -199,11 +199,11 @@ define([
             },
 
             onActive: function() {
-                $('#Title, #Share, #continue').removeClass('hidden').addClass('visible');
+                $('#Title').removeClass('hidden').addClass('visible');
             },
 
             onIdle: function() {
-                $('#Share, #continue').removeClass('visible').addClass('hidden');
+                //$('#continue').removeClass('visible').addClass('hidden');
             }
         });
 

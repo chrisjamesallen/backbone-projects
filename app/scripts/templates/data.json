@@ -16,14 +16,14 @@
             "type": "image",
             "hasImage": true,
             "url": "images/desktop/1.jpg",
-            "caption": "Josh Quiton<br><span>Josh wears jacket by Replay, jeans by We Are Replay</span>"
+            "caption": "Josh Quinton<br><span>Josh wears jacket by Replay, jeans by We Are Replay</span>"
         },
 
         {
             "type": "image",
             "hasImage": true,
             "url": "images/desktop/2.jpg",
-            "caption": "Josh Quiton<br><span>Josh wears jacket by Replay, jeans by We Are Replay, socks by Falke from <a href='http://www.sockshop.co.uk' target='_blank'>sockshop.co.uk</a></span>"
+            "caption": "Josh Quinton<br><span>Josh wears jacket by Replay, jeans by We Are Replay, socks by Falke from <a href='http://www.sockshop.co.uk' target='_blank'>sockshop.co.uk</a></span>"
         },
 
         {
@@ -44,7 +44,7 @@
             "type": "image",
             "hasImage": true,
             "url": "images/desktop/5.jpg",
-            "caption": "Chen Yu - <a href='http://instagram.com/yu_chen' target='_blank'>@yu_chen</a><br><span>Chen Yu wears top and dungarees by Dondup, vintage faux fur coat from Beyond Retro, vintage shirt (worn around waist) from Mint Vintage, boots by Casadei, cap by Missy Skins</span>"
+            "caption": "Chen Yu - <a href='http://instagram.com/yu_chen' target='_blank'>@yu_chen</a><br><span>Chen wears top and dungarees by Dondup, vintage faux fur coat from Beyond Retro, vintage shirt (worn around waist) from Mint Vintage, boots by Casadei, cap by Missy Skins</span>"
         },
 
         {
@@ -91,8 +91,8 @@
 
         {
             "type": "image",
-            "hasImage": true,
-            "url": "images/desktop/12.jpg",
+    "hasImage": true,
+    "url": "images/desktop/12.jpg",
             "caption": "Nuha Ruby Ra - <a href='http://instagram.com/nuharubyra' target='_blank'>@nuharubyra</a><br><span>Nuha wears skirt by Isabel Marant, vintage jacket her own, jewellery by Dominic Jones</span>"
         },
 

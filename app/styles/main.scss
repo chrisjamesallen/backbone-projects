@@ -184,8 +184,8 @@ a,a:visited{
 
 #Title h3{
     font-size:$font-s2;
-    line-height:$font-l2; 
-    font-family:"elucid";   
+    line-height:$font-l2;
+    font-family:"elucid";
     color:#ffffff;
     letter-spacing: 2px;
         @include transition-property(opacity);
