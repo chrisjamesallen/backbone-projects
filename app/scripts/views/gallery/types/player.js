@@ -17,11 +17,12 @@ define([
     initialize: function () {
       this.super('initialize');
       this.spinner = new ActivityIndicator({
-        inverted: false,
+        inverted: true,
         use_creatures: true,
         width: 20,
         height: 20
       });
+      this.set('aspect', this.model.get('height') / this.model.get('width') );
       this.addChild(this.spinner);
       this.active();
       return this;
@@ -80,7 +81,7 @@ define([
     },
 
     onResize: function () {
-      this.$el.height(this.$el.width() * this.DEFAULT_ASPECT);
+      this.$el.height(this.$el.width() * (this.get('aspect') || this.DEFAULT_ASPECT));
       this.$el.center();
     },
 

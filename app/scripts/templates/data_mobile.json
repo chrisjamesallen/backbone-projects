@@ -1,116 +1,95 @@
 {
 
-    "title": "",
-    "assets": [
+  "title": "",
+  "assets": [
 
 
-        {
-            "type": "card",
-            "hasImage": false,
-            "caption": "",
-            "heading": ""
-        },
+    {
+      "type": "card",
+      "hasImage": false,
+      "caption": "",
+      "heading": ""
+    },
 
 
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/1.jpg",
-            "caption": "Josh Quinton<br><span>Josh wears jacket by Replay, jeans by We Are Replay</span>"
-        },
+    {
+      "type": "video",
+      "hasImage": false,
+      "vimeo_id": "89336599",
+      "caption": "PETER PILOTTO<br><span></span>",
+      "width":1641,
+      "height":941
+    },
 
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/2.jpg",
-            "caption": "Josh Quinton<br><span>Josh wears jacket by Replay, jeans by We Are Replay, socks by Falke from <a href='http://www.sockshop.co.uk' target='_blank'>sockshop.co.uk</a></span>"
-        },
+    {
+      "type": "video",
+      "hasImage": false,
+      "vimeo_id": "89342872",
+      "caption": "LOUIS VUITTON<br><span></span>",
+      "width":1396,
+      "height":1011
+    },
 
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/3.jpg",
-            "caption": "Violette Esmeralda - <a href='http://instagram.com/violette_esmeralda' target='_blank'>@violette_esmeralda</a><br><span>Violette wears shirt by Equipment, fur scarf by Hockley, jeans by Karen Millen, shoes and earrings by Topshop</span>"
-        },
+    {
+      "type": "video",
+      "hasImage": false,
+      "vimeo_id": "89345742",
+      "caption": "VICTORIA BECKHAM<br><span></span>",
+      "width":1920,
+      "height":1080
+    },
 
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/4.jpg",
-            "caption": "Anna Brimma - <a href='http://instagram.com/annabrimma' target='_blank'>@annabrimma</a><br><span>Anna wears sweater by Neil Barrett, jeans by 7 For All Mankind, vintage faux fur and shirt from Mint Vintage, trainers by Reebok</span>"
-        },
+    {
+      "type": "video",
+      "hasImage": false,
+      "vimeo_id": "89342900",
+      "caption": "CALVIN KLEIN - LOVE MAGAZINE FEATURE<br><span></span>",
+      "width":1711,
+      "height":1196
+    },
 
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/5.jpg",
-            "caption": "Chen Yu - <a href='http://instagram.com/yu_chen' target='_blank'>@yu_chen</a><br><span>Chen wears top and dungarees by Dondup, vintage faux fur coat from Beyond Retro, vintage shirt (worn around waist) from Mint Vintage, boots by Casadei, cap by Missy Skins</span>"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/6.jpg",
-            "caption": "John Bestley - <a href='http://instagram.com/jonathanbestley' target='_blank'>@jonathanbestley</a><br><span>John wears jacket and shirt by Lanvin, trousers by Topshop, boots by Dr Martens</span>"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/7.jpg",
-            "caption": "Max Granger<br><span>Max wears jacket by Versace, scarf by Hermés, jewellery his own</span>"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/8.jpg",
-            "caption": "Lottie Eunice - <a href='http://instagram.com/lottie_useless' target='_blank'>@lottie_useless</a><br><span>Lottie wears jeans by Erika Cavallini, leather jacket by Diesel, fur jacket by Philosophy, vintage faux fur jacket from Rokit</span>"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/9.jpg",
-            "caption": "Emma Chitty - <a href='http://instagram.com/shugahigh' target='_blank'>@shugahigh</a><br><span>Emma wears top by Erika Cavallini</span>"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/10.jpg",
-            "caption": "Jakob Landvik - <a href='http://instagram.com/jakobland' target='_blank'>@jakobland</a><br><span>Jakob wears polo shirt and trousers by Alfred Dunhill, vintage sheepskin coat from Beyond Retro</span>"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/11.jpg",
-            "caption": "Hannah Marsden - <a href='http://instagram.com/iwannabewheretheb0ysare' target='_blank'>@iwannabewheretheb0ysare</a><br><span>Hannah wears dress and bolero by Chanel</span>"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/12.jpg",
-            "caption": "Nuha Ruby Ra - <a href='http://instagram.com/nuharubyra' target='_blank'>@nuharubyra</a><br><span>Nuha wears skirt by Isabel Marant, vintage jacket her own, jewellery by Dominic Jones</span>"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/13.jpg",
-            "caption": "Cora Corre - <a href='http://instagram.com/coracorre' target='_blank'>@coracorre</a><br><span>Cora wears shirt by Karen Millen, skirt by DKNY</span>"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/mobile/14.jpg",
-            "caption": "Amanda Henry - <a href='http://instagram.com/amanda_noreenx' target='_blank'>@amanda_noreenx</a><br><span>Amanda wears poloneck by DSquared, fur gilet by Hockley, jeans by Valentino</span>"
-        }
+    {
+      "type": "video",
+      "hasImage": false,
+      "vimeo_id": "89348243",
+      "caption": "VICTORIA BECKHAM<br><span></span>",
+      "width":1440,
+      "height":1080
+    },
 
 
-    ]
+
+
+    {
+      "type": "video",
+      "hasImage": false,
+      "vimeo_id": "89350075",
+      "caption": "VICTORIA BECKHAM<br><span></span>",
+      "width":1440,
+      "height":1080
+    },
+
+    {
+      "type": "video",
+      "hasImage": false,
+      "vimeo_id": "89349918",
+      "caption": "LOVE MAGAZINE<br><span></span>",
+      "width":1100,
+      "height":720
+    },
+
+    {
+      "type": "video",
+      "hasImage": false,
+      "vimeo_id": "89351160",
+      "caption": "LOVE MAGAZINE<br><span></span>",
+      "width":1683,
+      "height":1059
+    }
+
+
+
+
+  ]
 
 }

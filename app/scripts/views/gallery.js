@@ -55,11 +55,12 @@ define([
 
             onSync: function() {
                 this.addGalleryViews();
-                this.addCredits();
-                this.addContinue();
+                //this.addCredits();
+                //this.addContinue();
                 this.images.loadGallery();
                 this.defer(this.onResize);
                 this.onResize();
+              this.showButtons();
 
             },
 
@@ -150,6 +151,10 @@ define([
                         _.delay(_.bind(this.hideTitle, this), 2000);
                         this.hasShowTitle = true;
                     }
+                }
+
+                if (i <= 1){
+                  this.$navigation.$left.hide();
                 }
 
                 if (i >= this.images.collection.length - 1) {

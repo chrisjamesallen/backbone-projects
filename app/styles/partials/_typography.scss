@@ -22,7 +22,7 @@ $font-l3 : 10px;
   font-size:$font-s1;
   line-height:$font-l1;
   letter-spacing:0px;
-  color:#000000;
+  color:#9C9C9C;
   @include transition-property(opacity);
   @include transition-duration(1s);
 }
