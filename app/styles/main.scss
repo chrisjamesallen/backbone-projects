@@ -388,6 +388,7 @@ a,a:visited{
 #continue a{
     color: #fff;
     text-decoration:none;
+    display: inline-block;
 }
 
 #continue {
@@ -404,6 +405,9 @@ a,a:visited{
     z-index: 101;
 }
 
+#Box .credits .s2 a{
+    padding: 0 7px;
+}
 
 
 .twitter-share-button{
@@ -683,6 +687,16 @@ and (max-height: 840px)
     font-size: $font-s3  * 0.7;
     line-height: $font-l3  * 0.7;
   }
+#Title h1{
+    font-size:$font-s1* 0.75;
+    line-height:$font-l1* 0.75;
+}
+
+#Title h3{
+    font-size:$font-s2* 0.75;
+    line-height:$font-l2* 0.75;
+    letter-spacing: 1px;
+}
 
 }
 

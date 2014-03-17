@@ -1,7 +1,18 @@
 {
 
     "title": "",
-    "assets": [{
+    "assets": [
+
+
+        {
+            "type": "card",
+            "hasImage": false,
+            "caption": "",
+            "heading": ""
+        },
+
+
+        {
             "type": "image",
             "hasImage": true,
             "url": "images/desktop/1.jpg",
