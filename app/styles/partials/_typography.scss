@@ -5,16 +5,25 @@
   url(fonts/elucid/EuclidFlex-Bold.woff) format("woff"),
   url(fonts/elucid/EuclidFlex-Bold.ttf) format("truetype"),
   url(fonts/elucid/EuclidFlex-Bold.svg#GaramondMT) format("svg");
-  font-style: bold
+  font-style: bold;
 }
 
-$font-s1 : 100px;
-$font-s2 : 24px;
-$font-s3 : 14px;
+$font-s1 : 10px;
+$font-s2 : 10px;
+$font-s3 : 10px;
 
-$font-l1 : 115px;
-$font-l2 : 41px;
-$font-l3 : 28px;
+$font-l1 : 10px;
+$font-l2 : 10px;
+$font-l3 : 10px;
 
-
+.sans{
+  font-family: "Helvetica",arial;
+  font-weight: bold;
+  font-size:$font-s1;
+  line-height:$font-l1;
+  letter-spacing:0px;
+  color:#000000;
+  @include transition-property(opacity);
+  @include transition-duration(1s);
+}
 
