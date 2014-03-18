@@ -1,95 +1,99 @@
 {
 
-  "title": "",
-  "assets": [
+    "title": "",
+    "assets": [
 
 
-    {
-      "type": "card",
-      "hasImage": false,
-      "caption": "",
-      "heading": ""
-    },
+        {
+            "type": "card",
+            "hasImage": false,
+            "caption": "",
+            "heading": ""
+        },
 
 
-    {
-      "type": "video",
-      "hasImage": false,
-      "vimeo_id": "89336599",
-      "caption": "PETER PILOTTO<br><span></span>",
-      "width":1641,
-      "height":941
-    },
+        {
+            "type": "video",
+            "hasImage": false,
+            "vimeo_id": "89336599",
+            "caption": "PETER PILOTTO<br><span></span>",
+            "width": 16,
+            "height": 9
+        },
 
-    {
-      "type": "video",
-      "hasImage": false,
-      "vimeo_id": "89342872",
-      "caption": "LOUIS VUITTON<br><span></span>",
-      "width":1396,
-      "height":1011
-    },
+        {
+            "type": "video",
+            "hasImage": false,
+            "vimeo_id": "89342872",
+            "caption": "LOUIS VUITTON<br><span></span>",
+            "width": 1396,
+            "height": 1011
+        },
 
-    {
-      "type": "video",
-      "hasImage": false,
-      "vimeo_id": "89345742",
-      "caption": "VICTORIA BECKHAM<br><span></span>",
-      "width":1920,
-      "height":1080
-    },
+        {
+            "type": "video",
+            "hasImage": false,
+            "vimeo_id": "89345742",
+            "caption": "VICTORIA BECKHAM<br><span></span>",
+            "width": 1920,
+            "height": 1080
+        },
 
-    {
-      "type": "video",
-      "hasImage": false,
-      "vimeo_id": "89342900",
-      "caption": "CALVIN KLEIN - LOVE MAGAZINE FEATURE<br><span></span>",
-      "width":1711,
-      "height":1196
-    },
+        {
+            "type": "video",
+            "hasImage": false,
+            "vimeo_id": "89342900",
+            "caption": "CALVIN KLEIN - LOVE MAGAZINE FEATURE<br><span></span>",
+            "width": 1711,
+            "height": 1196
+        },
 
-    {
-      "type": "video",
-      "hasImage": false,
-      "vimeo_id": "89348243",
-      "caption": "VICTORIA BECKHAM<br><span></span>",
-      "width":1440,
-      "height":1080
-    },
-
-
-
-
-    {
-      "type": "video",
-      "hasImage": false,
-      "vimeo_id": "89350075",
-      "caption": "VICTORIA BECKHAM<br><span></span>",
-      "width":1440,
-      "height":1080
-    },
-
-    {
-      "type": "video",
-      "hasImage": false,
-      "vimeo_id": "89349918",
-      "caption": "LOVE MAGAZINE<br><span></span>",
-      "width":1100,
-      "height":720
-    },
-
-    {
-      "type": "video",
-      "hasImage": false,
-      "vimeo_id": "89351160",
-      "caption": "LOVE MAGAZINE<br><span></span>",
-      "width":1683,
-      "height":1059
-    }
+        {
+            "type": "video",
+            "hasImage": false,
+            "vimeo_id": "89348243",
+            "caption": "VICTORIA BECKHAM<br><span></span>",
+            "width": 1440,
+            "height": 1080
+        },
 
 
 
 
-  ]
+
+        {
+            "type": "video",
+            "hasImage": false,
+            "vimeo_id": "89350075",
+            "caption": "VICTORIA BECKHAM<br><span></span>",
+            "width": 1440,
+            "height": 1080
+        },
+
+
+
+
+        {
+            "type": "video",
+            "hasImage": false,
+            "vimeo_id": "89349918",
+            "caption": "LOVE MAGAZINE<br><span></span>",
+            "width": 1100,
+            "height": 720
+        },
+
+        {
+            "type": "video",
+            "hasImage": false,
+            "vimeo_id": "89351160",
+            "caption": "LOVE MAGAZINE<br><span></span>",
+            "width": 1683,
+            "height": 1059
+        }
+
+
+
+
+    ]
 
 }
