@@ -4,12 +4,7 @@
     "assets": [
 
 
-        {
-            "type": "card",
-            "heading": "love remix<br>- ralph lauren",
-            "hasImage": true,
-            "url": "images/desktop/1.jpg"
-        },
+
 
         {
             "type": "video",

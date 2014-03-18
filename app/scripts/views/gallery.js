@@ -48,6 +48,7 @@ define([
                 this.images.fetch();
                 this.onActive();
                 this.onResize();
+                this.showButtons();
                 window.gallery = this;
                 return this;
             },
@@ -57,6 +58,7 @@ define([
                 this.addCredits();
                 // this.addContinue();
                 this.images.loadGallery();
+                this.images.collection.first().set('selected', true);
             },
 
             addGalleryViews: function() {
@@ -179,11 +181,11 @@ define([
             },
 
             onActive: function() {
-                $('#Title, #Navigation, #Share, #continue').removeClass('hidden').addClass('visible');
+                $('#Title, #Share, #continue').removeClass('hidden').addClass('visible');
             },
 
             onIdle: function() {
-                $('#Title, #Navigation, #Share, #continue').removeClass('visible').addClass('hidden');
+                $('#Title, #Share, #continue').removeClass('visible').addClass('hidden');
             }
         });
 
