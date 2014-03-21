@@ -17,7 +17,7 @@ define([
         initialize: function() {
             this.super('initialize');
             this.spinner = new ActivityIndicator({
-                inverted: true,
+                inverted: false,
                 use_creatures: false,
                 width: 20,
                 height: 20
