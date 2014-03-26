@@ -66,7 +66,7 @@ define([
                 var w = this.$('img').width();
                 var h = this.$('img').height();
                 var aspect = w / h;
-
+                console.log(aspect, 'image');
                 //check if target height works to width
                 if (targetH * aspect < boundaryW) {
                     //..use height target

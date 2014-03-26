@@ -29,6 +29,7 @@ define([
                 this.listenTo(this.images.collection, 'sync', _.bind(this.onSync, this));
                 this.listenTo(this.images.collection, 'change:saved', _.bind(this.showButtons, this));
                 this.listenTo(this.images.collection, 'change:selected', _.bind(this.showButtons, this));
+                $('body').keyup(_.bind(this.heardKeyPress, this));
                 if (!Modernizr.touch) {
                     $(window).on('mousemove', _.debounce(_.bind(this.onIdle, this), 2000));
                     $(window).on('mousemove', _.debounce(_.bind(this.onActive, this), 2000, true));
@@ -55,8 +56,8 @@ define([
 
             onSync: function() {
                 this.addGalleryViews();
-                this.addCredits();
-                this.addContinue();
+                //this.addCredits();
+                //this.addContinue();
                 this.images.loadGallery();
                 this.defer(this.onResize);
                 this.onResize();
@@ -104,6 +105,26 @@ define([
 
 
                 }, this));
+
+            },
+
+            heardKeyPress: function(e) {
+                var key = e.keyCode;
+                if (this.images.collection.length) {
+                    switch (key) {
+                        case 37:
+                            {
+                                this.goPreviousPage();
+                                break;
+                            }
+                        case 39:
+                            {
+                                this.goNextPage();
+                                break;
+                            }
+                    }
+
+                }
 
             },
 

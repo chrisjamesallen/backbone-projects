@@ -245,7 +245,7 @@ a,a:visited{
     padding: 20px 0;
     position: fixed;
     color: #ffffff;
-
+    z-index: 200;
 }
 
 #Box .item .footer.visible{
@@ -442,7 +442,7 @@ a,a:visited{
 
 
 .item .player{
-  width:60%;
+  width:40%;
   position: absolute;
 }
 

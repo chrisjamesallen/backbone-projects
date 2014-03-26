@@ -6,81 +6,164 @@
 
         {
             "type": "card",
+            "heading": "love remix<br>- ralph lauren",
             "hasImage": false,
-            "caption": "",
-            "heading": ""
+            "url": "images/desktop/1.jpg"
+        },
+
+        {
+            "type": "image",
+            "url": "images/desktop/covers/1.jpg",
+            "hasImage": true,
+            "caption": "Love Issue 11 Covers – Miley Cyrus"
+        },
+
+        {
+            "type": "image",
+            "url": "images/desktop/covers/2.jpg",
+            "hasImage": true,
+            "caption": "Love Issue 11 Covers – Cara Delevingne by Drew Jarrett"
+        },
+
+        {
+            "type": "image",
+            "url": "images/desktop/covers/3.jpg",
+            "hasImage": true,
+            "caption": "Love Issue 11 Covers – Kate Upton by Nigel Shafran"
+        },
+
+        {
+            "type": "image",
+            "url": "images/desktop/covers/4.jpg",
+            "hasImage": true,
+            "caption": "Love Issue 11 Covers – Inez and Vinoodh"
+
+        },
+
+        {
+            "type": "image",
+            "url": "images/desktop/covers/5.jpg",
+            "hasImage": true,
+            "caption": "Love Issue 11 Covers – lily mcmenamy by Jurgen Teller"
+        },
+
+        {
+            "type": "image",
+            "url": "images/desktop/covers/6.jpg",
+            "hasImage": true,
+            "caption": "Love Issue 11 Covers – rila fukushima by Araki"
+        },
+
+
+        {
+            "type": "video",
+            "vimeo_id": "86895219",
+            "caption": "Issue 11 Remix",
+            "size": "small"
+        },
+
+
+        {
+            "type": "video",
+            "vimeo_id": "90048747",
+            "caption": ""
+        },
+
+        {
+            "type": "card",
+            "heading": "social media",
+            "hasImage": false,
+            "url": "images/desktop/1.jpg"
         },
 
 
         {
             "type": "image",
+            "url": "images/desktop/instagram/0.jpg",
             "hasImage": true,
-            "url": "images/desktop/1.jpg",
-            "caption": "Ola wears shirt and skirt by Hermés; Nastya wears dress by Erika Cavallini"
+            "caption": "Instagram"
+        },
+
+
+        {
+            "type": "video",
+            "vimeo_id": "90029162",
+            "caption": "Instagram"
         },
 
         {
             "type": "image",
+            "url": "images/desktop/instagram/1.jpg",
             "hasImage": true,
-            "url": "images/desktop/2.jpg",
-            "caption": "Natalie wears dress by J Crew (worn backwards)"
+            "caption": "Instagram"
         },
 
         {
             "type": "image",
+            "url": "images/desktop/instagram/2.jpg",
             "hasImage": true,
-            "url": "images/desktop/3.jpg",
-            "caption": "Ola wears dress by Sandro; Natalie wears slip dress by La Perla"
+            "caption": "Instagram"
+        },
+
+
+        {
+            "type": "image",
+            "url": "images/desktop/facebook/1.jpg",
+            "hasImage": true,
+            "caption": "Facebook"
         },
 
         {
             "type": "image",
+            "url": "images/desktop/facebook/2.jpg",
             "hasImage": true,
-            "url": "images/desktop/4.jpg",
-            "caption": "Nastya wears dress by Joseph"
+            "caption": "Facebook"
+        },
+
+
+        {
+            "type": "image",
+            "url": "images/desktop/twitter/1.jpg",
+            "hasImage": true,
+            "caption": "Twitter"
+        },
+
+
+        {
+            "type": "video",
+            "vimeo_id": "90108067",
+            "caption": "Marc Jacobs feature"
+        },
+
+
+        {
+            "type": "image",
+            "url": "images/desktop/events/1.jpg",
+            "hasImage": true,
+            "caption": "Cara Delevingne"
         },
 
         {
             "type": "image",
+            "url": "images/desktop/events/2.jpg",
             "hasImage": true,
-            "url": "images/desktop/5.jpg",
-            "caption": "Ola wears dress by Leon Max; Nastya wears top by Givenchy"
+            "caption": "Kendall Jenner"
         },
 
         {
             "type": "image",
+            "url": "images/desktop/events/3.jpg",
             "hasImage": true,
-            "url": "images/desktop/6.jpg",
-            "caption": "Nastya wears cape by Leon Max"
+            "caption": "Joan Smalls & Derek Blasberg"
         },
 
         {
             "type": "image",
+            "url": "images/desktop/events/4.jpg",
             "hasImage": true,
-            "url": "images/desktop/7.jpg",
-            "caption": "Natalie wears dress by Vionnet"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/desktop/8.jpg",
-            "caption": "Ola wears shirt by Bottega Veneta, skirt by Karen Millen"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/desktop/9.jpg",
-            "caption": "Nastya wears jacket by Emporio Armani, shorts by DSquared"
-        },
-
-        {
-            "type": "image",
-            "hasImage": true,
-            "url": "images/desktop/10.jpg",
-            "caption": "Natalie wears skirt by La Perla, top by Diesel Black Gold, shoes by Longchamp"
+            "caption": "Georgia May Jagger"
         }
+
 
 
     ]
